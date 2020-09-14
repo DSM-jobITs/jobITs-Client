@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const NavWarp = styled.div`
   display: flex;
+  position: fixed;
   width: 100vw;
   height: 55px;
   justify-content: space-around;
-  box-shadow: 0px 6px 5px -7px black;
+  box-shadow: 0px 6px 8px 1px rgba(0, 0, 0, 0.75);
+  background: #fff;
   align-items: center;
 `;
 
@@ -13,6 +15,7 @@ export const Logo = styled.div`
   width: 80px;
   font-size: 1.75rem;
   font-weight: bold;
+  margin-left: 20px;
 `;
 
 export const LinkWarp = styled.div`
@@ -31,19 +34,20 @@ export const NavLink = styled.li`
   padding: 14px;
   list-style: none;
   &:hover {
-    font-weight: bold;
+    font-weight: bolder;
     transition: 0.1s;
     border-bottom: 7px solid #000;
   }
 `;
 
 export const Login = styled.button`
-  width: 90px;
+  width: 95px;
   height: 37px;
-  border: none;
-  border-radius: 6px;
+  margin-right: 20px;
+  border: 4px solid black;
   outline: none;
+  border-radius: 8px;
+  font-weight: bold;
+  background: white;
   cursor: pointer;
-  background: #000;
-  color: white;
 `;
