@@ -2,4 +2,4 @@
 
 Mimanjob Project's Client Repository
 
-살려줘
+[배길준](https://github.com/bgj0127)
