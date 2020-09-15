@@ -1,0 +1,44 @@
+import styled from "styled-components";
+
+export const MainWrapper = styled.div`
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const PreviewWrapper = styled.div`
+  width: 1100px;
+  height: 250px;
+  background: #fff;
+`;
+
+export const TopInner = styled.div`
+  display: flex;
+  width: 1100px;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const PreviewLabel = styled.p`
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #494949;
+`;
+
+export const NoticeButton = styled.button`
+  width: 25px;
+  height: 25px;
+  margin-top: 30px;
+  margin-right: 15px;
+  background: #000;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+`;
