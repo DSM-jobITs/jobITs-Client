@@ -6,7 +6,7 @@ export const NavWarp = styled.div`
   width: 100vw;
   height: 55px;
   justify-content: space-around;
-  box-shadow: 0px 6px 8px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.75);
   background: #fff;
   align-items: center;
 `;
@@ -15,7 +15,7 @@ export const Logo = styled.div`
   width: 80px;
   font-size: 1.75rem;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 100px;
 `;
 
 export const LinkWarp = styled.div`
@@ -33,8 +33,8 @@ export const NavLink = styled.li`
   height: 20px;
   padding: 14px;
   list-style: none;
+  font-weight: bold;
   &:hover {
-    font-weight: bolder;
     transition: 0.1s;
     border-bottom: 7px solid #000;
   }
@@ -43,7 +43,7 @@ export const NavLink = styled.li`
 export const Login = styled.button`
   width: 95px;
   height: 37px;
-  margin-right: 20px;
+  margin-right: 100px;
   border: 4px solid black;
   outline: none;
   border-radius: 8px;

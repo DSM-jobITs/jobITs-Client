@@ -1,48 +1,68 @@
 import styled from "styled-components";
 
-export const LoginWarp = styled.div`
-  display: flex;
+export const MainWrapper = styled.div`
   width: 400px;
-  height: 400px;
-  background: #fff;
-  border-radius: 25px;
+  height: 500px;
+  background-color: #ffffff;
+  margin-left: 175px;
+  border-radius: 40px;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 `;
 
-export const LoginName = styled.div`
+export const LoginName = styled.p`
+  display: lnline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #646464;
+  margin: 0;
+  margin-bottom: 10px;
+`;
+
+export const LoginWrapper = styled.form`
+  border-top: 1px solid #b3b3b3;
+  width: 80%;
+  height: 60%;
+  margin-bottom: 40px;
+`;
+
+export const LoginLabel = styled.p`
+  display: lnline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #646464;
+  margin: 0;
+  margin-bottom: 10px;
+`;
+
+export const LoginInput = styled.input`
+  width: 94%;
+  height: 40px;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  margin-bottom: 20px;
+`;
+
+export const LoginSave = styled.p`
+  display: lnline-block;
+  font-size: 10px;
+  font-weight: bold;
+  color: #646464;
+  margin: 0;
+  margin-bottom: 10px;
+`;
+
+export const LoginSubmit = styled.button`
   width: 100%;
-  height: 60px;
-  margin: 10px;
-  text-align: center;
-  font-size: 2.7rem;
-  &::after {
-    content: "  LOGIN  ";
-    border-bottom: 2px solid #000;
-  }
-`;
-
-export const ID = styled.input`
-  width: 300px;
-  height: 40px;
-  border: solid 1px #b5b5b5;
-  border-radius: 5px;
-  margin: 20px;
-`;
-
-export const Password = styled.input`
-  width: 300px;
-  height: 40px;
-  border: solid 1px #b5b5b5;
-  border-radius: 5px;
-  margin: 20px;
-`;
-
-export const Submit = styled.button`
-  width: 300px;
-  height: 50px;
-  background: #1a1a1a;
+  height: 45px;
+  background: #333333;
   border: none;
+  outline: none;
   border-radius: 5px;
-  margin: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
 `;

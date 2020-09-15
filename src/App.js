@@ -5,6 +5,7 @@ import Routing from "./Routing";
 import { GlobalStyle } from "./GlobalStyle";
 import Header from "./components/navLink/Header";
 import Login from "./components/login/Login";
+import NoticePreview from "./components/preview/NoticePreview";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Login />
+      <NoticePreview />
     </BrowserRouter>
   );
 };
