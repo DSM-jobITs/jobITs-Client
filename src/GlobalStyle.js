@@ -13,11 +13,14 @@ export const GlobalStyle = createGlobalStyle`
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #363636;
+    background-color: #a847ff;
   }
   &::-webkit-scrollbar-button {
     width: 0;
     height: 0;
   }
+    }
+    * {
+      outline: none;
     }
 `;
