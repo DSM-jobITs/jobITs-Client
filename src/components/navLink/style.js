@@ -6,7 +6,7 @@ export const NavWarp = styled.div`
   width: 100vw;
   height: 55px;
   justify-content: space-around;
-  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 6px -1px #951ef8;
   background: #fff;
   align-items: center;
 `;
