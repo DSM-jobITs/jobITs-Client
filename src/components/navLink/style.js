@@ -11,11 +11,9 @@ export const NavWarp = styled.div`
   align-items: center;
 `;
 
-export const Logo = styled.div`
-  width: 80px;
-  font-size: 1.75rem;
-  font-weight: bold;
-  margin-left: 100px;
+export const Logo = styled.img`
+  width: 120px;
+  margin-left: 70px;
 `;
 
 export const LinkWarp = styled.div`
@@ -36,7 +34,7 @@ export const NavLink = styled.li`
   font-weight: bold;
   &:hover {
     transition: 0.1s;
-    border-bottom: 7px solid #000;
+    border-bottom: 7px solid #7b598a;
   }
 `;
 
@@ -44,10 +42,11 @@ export const Login = styled.button`
   width: 95px;
   height: 37px;
   margin-right: 100px;
-  border: 4px solid black;
+  border: 4px solid #7b598a;
   outline: none;
   border-radius: 8px;
   font-weight: bold;
   background: white;
+  color: #7b598a;
   cursor: pointer;
 `;

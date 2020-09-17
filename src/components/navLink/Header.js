@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       <S.NavWarp>
-        <S.Logo>jobITs</S.Logo>
+        <S.Logo src="/src/img/Logo.png" />
         <S.LinkWarp>
           <S.NavLink>공지사항</S.NavLink>
           <S.NavLink>기업</S.NavLink>
