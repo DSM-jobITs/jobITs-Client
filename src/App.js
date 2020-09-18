@@ -6,6 +6,7 @@ import { GlobalStyle } from "./GlobalStyle";
 import Header from "./components/navLink/Header";
 import Login from "./components/login/Login";
 import NoticePreview from "./components/preview/NoticePreview";
+import Intro from "./components/intro/Intro";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Header />
       <Login />
       <NoticePreview />
+      <Intro />
     </BrowserRouter>
   );
 };
