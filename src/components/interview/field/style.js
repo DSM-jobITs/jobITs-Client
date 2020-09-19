@@ -17,7 +17,7 @@ export const TextWarpper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 70px;
 `;
 
 export const FirstText = styled.p`
