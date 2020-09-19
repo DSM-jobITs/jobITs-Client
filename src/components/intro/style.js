@@ -4,18 +4,19 @@ export const MainWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 480px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 `;
 
 export const IntroImg = styled.img`
   width: 400px;
+  margin-left: 150px;
 `;
 
 export const TextWarpper = styled.div`
   display: flex;
   height: 200px;
-  margin: 40px;
+  margin-right: 150px;
   flex-direction: column;
 `;
 
