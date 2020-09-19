@@ -7,6 +7,7 @@ import Header from "./components/navLink/Header";
 import Login from "./components/login/Login";
 import NoticePreview from "./components/preview/NoticePreview";
 import Intro from "./components/intro/Intro";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Login />
       <NoticePreview />
       <Intro />
+      <Footer />
     </BrowserRouter>
   );
 };

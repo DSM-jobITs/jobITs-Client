@@ -6,7 +6,7 @@ export const NavWarp = styled.div`
   width: 100vw;
   height: 55px;
   justify-content: space-around;
-  box-shadow: 0px 2px 6px -1px #951ef8;
+  box-shadow: 0px 3px 6px -1px #a1a1a1;
   background: #fff;
   align-items: center;
 `;
@@ -32,8 +32,8 @@ export const NavLink = styled.li`
   padding: 14px;
   list-style: none;
   font-weight: bold;
+  transition: border-bottom 0.1s;
   &:hover {
-    transition: 0.1s;
     border-bottom: 7px solid #7b598a;
   }
 `;

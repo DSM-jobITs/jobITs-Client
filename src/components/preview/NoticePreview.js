@@ -10,6 +10,10 @@ const NoticePreview = () => {
           <S.PreviewLabel>공지</S.PreviewLabel>
           <S.NoticeButton />
         </S.TopInner>
+        <S.NoticeHeader>
+          <S.HeaderInner>제목</S.HeaderInner>
+          <S.HeaderInner>날짜</S.HeaderInner>
+        </S.NoticeHeader>
         <NoticeList />
         <NoticeList />
         <NoticeList />
