@@ -26,6 +26,7 @@ export const TopInner = styled.div`
 
 export const PreviewLabel = styled.p`
   display: inline-block;
+  width: 100px;
   font-weight: bold;
   font-size: 2.5rem;
   color: #494949;
@@ -41,4 +42,20 @@ export const NoticeButton = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
+`;
+
+export const NoticeHeader = styled.div`
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border-top: solid 2px #000000;
+  border-bottom: solid 2px #000000;
+  justify-content: space-between;
+  padding: 5px 0px;
+  align-items: center;
+`;
+
+export const HeaderInner = styled.p`
+  font-weight: bold;
+  margin: 0 85px;
 `;
