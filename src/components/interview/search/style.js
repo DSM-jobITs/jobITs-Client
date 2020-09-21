@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainWarpper = styled.div`
   display: flex;
   width: 100%;
-  height: 150px;
+  height: 123px;
   justify-content: center;
   align-items: center;
 `;
@@ -19,7 +19,7 @@ export const SearchWarpper = styled.div`
 export const SearchForm = styled.form`
   display: flex;
   width: 100%;
-  height: 33%;
+  height: 45%;
   justify-content: space-between;
   background: #000000;
   align-items: center;
