@@ -33,8 +33,9 @@ export const NavLink = styled.li`
   list-style: none;
   font-weight: bold;
   transition: border-bottom 0.1s;
+  cursor: pointer;
   &:hover {
-    border-bottom: 7px solid #7b598a;
+    border-bottom: 7px solid #6f1ab0;
   }
 `;
 
