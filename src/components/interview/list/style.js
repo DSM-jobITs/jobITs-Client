@@ -48,3 +48,16 @@ export const ListInner = styled.div`
   width: 100%;
   height: 520px;
 `;
+
+export const AddButton = styled.button`
+  position: relative;
+  width: 150px;
+  height: 45px;
+  float: right;
+  margin-right: 65px;
+  margin-top: -10px;
+  background: #e0d5e0;
+  box-shadow: 1px 3px 5px -1px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  border: none;
+`;
