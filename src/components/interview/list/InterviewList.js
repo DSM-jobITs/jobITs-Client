@@ -19,6 +19,7 @@ const InterviewList = () => {
           <ListBox />
           <ListBox />
         </S.ListInner>
+        <S.AddButton>질문 추가하기</S.AddButton>
       </S.ListWarppper>
     </S.MainWarpper>
   );
