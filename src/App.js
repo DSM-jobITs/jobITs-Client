@@ -4,14 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 import Routing from "./Routing";
 import { GlobalStyle } from "./GlobalStyle";
 import NavLinkContainer from "./containers/navLink/NavLinkContainer";
-import AddInterview from "./components/interview/addInterview/AddInterview";
+import Notice from "./components/notice/Notice";
 
 const App = () => {
   return (
     <BrowserRouter>
       <GlobalStyle />
       <NavLinkContainer />
-      <AddInterview />
+      <Notice />
     </BrowserRouter>
   );
 };
