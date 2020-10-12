@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const NavWarp = styled.div`
   display: flex;
@@ -24,13 +25,13 @@ export const LinkWarp = styled.div`
   align-items: center;
 `;
 
-export const NavLink = styled.li`
+export const Category = styled(NavLink)`
   display: inline-block;
   text-align: center;
   width: 100px;
   height: 20px;
   padding: 14px;
-  list-style: none;
+  list-style:none;
   font-weight: bold;
   transition: border-bottom 0.1s;
   cursor: pointer;

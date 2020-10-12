@@ -5,7 +5,7 @@ const LoginBox = () => {
   return (
     <S.MainWrapper>
       <S.LoginName>welcome to the JobITs</S.LoginName>
-      <S.LoginWrapper>
+      <S.LoginForm>
         <S.LoginInput placeholder="email" type="text" />
         <S.LoginInput placeholder="password" type="password" />
         <S.SaveWarpper>
@@ -13,7 +13,7 @@ const LoginBox = () => {
           <S.LoginSaveLabel>아이디 저장하기</S.LoginSaveLabel>
         </S.SaveWarpper>
         <S.LoginSubmit>Log in</S.LoginSubmit>
-      </S.LoginWrapper>
+      </S.LoginForm>
     </S.MainWrapper>
   );
 };
