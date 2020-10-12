@@ -44,6 +44,9 @@ export const FieldWarpper = styled.div`
 `;
 
 export const FieldItem = styled.div`
+  display: flex;
+  align-items:center;
+  justify-content:center;
   min-width: 200px;
   height: 60px;
   border-radius: 15px;
@@ -51,4 +54,8 @@ export const FieldItem = styled.div`
   box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.3);
   margin: 25px;
   cursor: pointer;
+  ::active{
+    text-decoration:none;
+    color: #ffffff;
+  }
 `;
