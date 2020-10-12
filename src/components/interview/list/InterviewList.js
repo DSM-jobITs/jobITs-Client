@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import ListBox from "./listBox/ListBox";
 import * as S from "./style";
 
@@ -19,7 +20,9 @@ const InterviewList = () => {
           <ListBox />
           <ListBox />
         </S.ListInner>
-        <S.AddButton>질문 추가하기</S.AddButton>
+        <Link to="/addInterview">
+          <S.AddButton>질문 추가하기</S.AddButton>
+        </Link>
       </S.ListWarppper>
     </S.MainWarpper>
   );

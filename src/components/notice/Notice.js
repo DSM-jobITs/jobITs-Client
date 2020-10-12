@@ -20,6 +20,11 @@ const Notice = () => {
           <S.HeaderDate>등록일</S.HeaderDate>
         </S.NoticeHeader>
         <NoticeBox />
+        <NoticeBox />
+        <NoticeBox />
+        <NoticeBox />
+        <NoticeBox />
+        <NoticeBox />
       </S.NoticeWarpper>
     </S.MainWarpper>
   );

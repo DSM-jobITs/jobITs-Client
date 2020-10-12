@@ -3,6 +3,7 @@ import * as S from "./style";
 import {Route, Switch} from "react-router-dom"
 import MainContainer from "../../containers/MainContainer"
 import InterviewContainer from "../../containers/InterviewContainer"
+import AddInterview from "../../components/interview/addInterview/AddInterview"
 import Notice from "../notice/Notice"
 
 const Header = () => {
@@ -22,6 +23,7 @@ const Header = () => {
         <Route path="/" exact={true} component={MainContainer} />
         <Route path="/interview" component={InterviewContainer} />
         <Route path="/notice" component={Notice} />
+        <Route path="/addInterview" component={AddInterview} />
       </Switch>
     </>
   );

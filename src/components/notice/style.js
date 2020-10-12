@@ -59,6 +59,7 @@ export const SearchIcon = styled.img`
 export const NoticeWarpper = styled.div`
   width: 100%;
   height: 500px;
+  margin-bottom: 70px;
 `;
 
 export const NoticeHeader = styled.div`
