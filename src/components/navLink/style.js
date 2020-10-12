@@ -34,6 +34,7 @@ export const Category = styled(NavLink)`
   list-style:none;
   font-weight: bold;
   transition: border-bottom 0.1s;
+  text-decoration:none;
   cursor: pointer;
   &:hover {
     border-bottom: 7px solid #6f1ab0;

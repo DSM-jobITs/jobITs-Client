@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./style";
-import {Route, Switch} from "react-router-dom"
+import {Route, Switch, Link} from "react-router-dom"
 import MainContainer from "../../containers/MainContainer"
 import InterviewContainer from "../../containers/InterviewContainer"
 import AddInterview from "../../components/interview/addInterview/AddInterview"
@@ -10,7 +10,9 @@ const Header = () => {
   return (
     <>
       <S.NavWarp>
-        <S.Logo src="/src/img/Logo.png" />
+        <Link to="/">
+          <S.Logo src="/src/img/Logo.png" />
+        </Link>
         <S.LinkWarp>
           <S.Category to="/notice">공지사항</S.Category>
           <S.Category to="/jei">기업</S.Category>

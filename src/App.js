@@ -10,7 +10,6 @@ const App = () => {
     <BrowserRouter>
       <GlobalStyle />
       <Header />
-      {/* <MainContainer /> */}
     </BrowserRouter>
   );
 };
