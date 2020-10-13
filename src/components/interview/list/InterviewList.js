@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import 'babel-polyfill';
 import {Link} from "react-router-dom";
 import ListBox from "./listBox/ListBox";
 import * as S from "./style";
@@ -41,9 +42,9 @@ const InterviewList = () => {
       </S.ListWarppper>
       <div>
       <div>
-        <button>qnffjdhrl</button>
+        <button onClick={onClick}>qnffjdhrl</button>
       </div>
-      {data && <textarea rows={7} value={JSON.stringify(data,null,2)} readOnly={true}  />}
+      {contents && <textarea rows={7} value={JSON.stringify(contents,null,2)} readOnly={true}  />}
     </div>
     </S.MainWarpper>
     
