@@ -3,9 +3,9 @@ import * as S from "./style";
 
 const Question = () => {
   return (
-    <>
-      <S.Item required></S.Item>
-    </>
+    <div>
+    wlfans
+    </div>
   );
 };
 

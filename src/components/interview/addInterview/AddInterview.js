@@ -1,14 +1,20 @@
 import React from "react";
-import Tech from "./tech/Tech";
-import Mind from "./mind/Mind";
+import Question from "./question/Question";
 import * as S from "./style";
 
 const AddInterview = () => {
   return (
-    <S.Main>
-      <Tech />
-      <Mind />
-    </S.Main>
+    <S.MainWarpper>
+      <S.InnerForm>
+        <Question />
+        <Question />
+        <Question />
+        <Question />
+        <Question />
+
+      </S.InnerForm>
+      <S.InnerForm>mind</S.InnerForm>
+    </S.MainWarpper>
   );
 };
 
