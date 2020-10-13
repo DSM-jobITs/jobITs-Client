@@ -2,6 +2,14 @@ import React from "react";
 import * as S from "./style";
 
 const Field = () => {
+
+  const fieldList = [
+    '프론트엔드',
+    '백엔드',
+    '데이터베이스',
+    '보안',
+    '게임',
+  ]
   return (
     <S.MainWarpper>
       <S.TextWarpper>

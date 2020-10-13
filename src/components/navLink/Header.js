@@ -2,11 +2,12 @@ import React from "react";
 import * as S from "./style";
 import {Route, Switch, Link} from "react-router-dom"
 import MainContainer from "../../containers/MainContainer"
-import InterviewContainer from "../interview/list/InterviewList"
+import InterviewContainer from "../interview/InterviewContainer"
 import AddInterview from "../../components/interview/addInterview/AddInterview"
 import Notice from "../notice/Notice"
 
 const Header = () => {
+
   return (
     <>
       <S.NavWarp>
