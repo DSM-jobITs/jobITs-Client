@@ -34,12 +34,20 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: "file-loader",
+      },
+      {
+        test: /\.txt$/,
+        use: "raw-loader",
+      },
     ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: "public/index.html",
+      template: "dist/index.html",
     }),
   ],
   devServer: {
