@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     outline: none;
   }
 
-  p::selection, li::selection {
+  *::selection {
     background-color: #7f27cf;
     color: #ffffff;
   }
