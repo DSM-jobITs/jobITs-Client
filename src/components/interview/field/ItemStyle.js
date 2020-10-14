@@ -16,7 +16,7 @@ cursor: pointer;
 export const Input = styled.input`
 &:checked + label{
   color: #ffffff;
-  background: #bb45ff;
+  background: #c259ff;
   font-weight:bold;
 }
 `

@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./style";
+import 'babel-polyfill';
 import NoticeBox from "./noticeBox/NoticeBox";
 
 const Notice = () => {

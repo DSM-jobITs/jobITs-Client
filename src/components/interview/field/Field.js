@@ -32,7 +32,7 @@ const Field = () => {
       <S.FieldForm action="">
         {fieldList.map(field => {
           return(
-            <FieldItem  field={field}/>
+            <FieldItem key={field} field={field}/>
           )
         })}
       </S.FieldForm>

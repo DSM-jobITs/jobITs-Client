@@ -10,7 +10,7 @@ const InterviewList = () => {
   const [field,setField] = useState("");
 
   useEffect(()=>{
-    axios.get("http://10.156.146.139:3000/interview?page=1").then(response => {
+    axios.get("http://10.156.146.139:3000/interview").then(response => {
       setContents(response.data.lists)
     });
   },[])
@@ -31,7 +31,6 @@ const InterviewList = () => {
             key={list.id} />
           );
         })}
-
         </S.ListInner>
         <Link to="/addInterview">
           <S.AddButton>질문 추가하기</S.AddButton>

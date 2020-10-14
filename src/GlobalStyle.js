@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     outline: none;
+    border: none;
   }
 
   *::selection {
@@ -31,6 +32,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   button {
+    border: none;
     cursor:pointer;
   }
 `;

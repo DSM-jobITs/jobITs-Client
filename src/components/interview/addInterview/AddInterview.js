@@ -1,20 +1,32 @@
-import React from "react";
+import React,{useState} from "react";
 import Question from "./question/Question";
+import 'babel-polyfill';
 import * as S from "./style";
 
 const AddInterview = () => {
-  return (
-    <S.MainWarpper>
-      <S.InnerForm>
-        <Question />
-        <Question />
-        <Question />
-        <Question />
-        <Question />
+  const [question,setQuestion] = useState(1);
 
-      </S.InnerForm>
-      <S.InnerForm>mind</S.InnerForm>
-    </S.MainWarpper>
+  const onClick = (e) => {
+    e.preventDefault();
+    setQuestion(question + 1);
+  }
+
+  return (
+    <S.MainForm action="">
+      <S.Warpper>
+        <S.Header>
+          <S.Title>면접 질문</S.Title>
+          <S.SubmitBtn>등록하기</S.SubmitBtn>
+          <S.FieldSelect>지원분야</S.FieldSelect>
+          <S.SelectDrop>
+          </S.SelectDrop>
+        </S.Header>
+        <S.InputWarpper>
+        {question}
+        </S.InputWarpper>
+        <S.AddInputBtn onClick={onClick}>질문 추가하기</S.AddInputBtn>
+      </S.Warpper>
+    </S.MainForm>
   );
 };
 
