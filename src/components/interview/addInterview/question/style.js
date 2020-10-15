@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Textarea = styled.textarea`
   display: flex;
-  width: 90%;
+  width: 85%;
   height: 130px;
-  margin-left: 20px;
+  margin-left: 60px;
   margin-top: 20px;
   padding: 20px;
   resize: none;
@@ -27,12 +27,21 @@ export const Label = styled.label`
   align-items:center;
   justify-content:center;
   min-width: 90px;
-  margin-left: 400px;
   height: 40px;
   border: none;
   border-radius: 10px;
   background: #ffffff;
   box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.3);
   margin: 25px;
+  margin-right: 0px;
+  margin-left: 920px;
   cursor: pointer;
+`
+
+export const Close = styled.button`
+  position: absolute;
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+  background: none;
 `

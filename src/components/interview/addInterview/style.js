@@ -12,7 +12,7 @@ export const Warpper = styled.div`
   display: flex;
   width: 100%;
   min-height: 100vh;
-  background:#aaa;
+  background:#F6F6F6;
   flex-direction:column;
   justify-content:flex-start;
   align-items:center;
@@ -67,12 +67,12 @@ export const InputWarpper = styled.div`
   align-items:flex-start;
   width: 70%;
   min-height: 240px;
-  background: #cfcfcf;
 `
 
 export const AddInputBtn = styled.button`
   width: 200px;
   height: 40px;
   margin-top: 20px;
-  background: #56781f;
+  border-radius: 10px;
+  background: #EBEBEB;
 `

@@ -22,7 +22,7 @@ const AddInterview = () => {
           </S.SelectDrop>
         </S.Header>
         <S.InputWarpper>
-        {question}
+        <Question/>
         </S.InputWarpper>
         <S.AddInputBtn onClick={onClick}>질문 추가하기</S.AddInputBtn>
       </S.Warpper>
