@@ -13,6 +13,11 @@ export const Textarea = styled.textarea`
     font-size:1.1rem;
   }
 `
+export const Close = styled.button`
+  width: 30px;
+  height: 30px;
+  background: none;
+`
 
 export const Input = styled.input`
   &:checked + label{
@@ -35,13 +40,7 @@ export const Label = styled.label`
   margin: 25px;
   margin-right: 0px;
   margin-left: 920px;
+  margin-top:10px;
   cursor: pointer;
 `
 
-export const Close = styled.button`
-  position: absolute;
-  margin-top: 20px;
-  width: 30px;
-  height: 30px;
-  background: none;
-`
