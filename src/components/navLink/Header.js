@@ -17,7 +17,7 @@ const Header = () => {
         </Link>
         <S.LinkWarp>
           <S.Category to="/notice">공지사항</S.Category>
-          <S.Category to="/jei">기업</S.Category>
+          <S.Category to="/company">기업</S.Category>
           <S.Category to="/interview">면접</S.Category>
           <S.Category to="/jeifweo">취업사전</S.Category>
         </S.LinkWarp>
