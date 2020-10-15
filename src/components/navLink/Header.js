@@ -5,6 +5,7 @@ import MainContainer from "../../containers/MainContainer"
 import InterviewContainer from "../interview/InterviewContainer"
 import AddInterview from "../../components/interview/addInterview/AddInterview"
 import Notice from "../notice/Notice"
+import AddNotice from "../notice/addNotice/AddNotice"
 
 const Header = () => {
 
@@ -27,6 +28,8 @@ const Header = () => {
         <Route path="/interview" component={InterviewContainer} />
         <Route path="/notice" component={Notice} />
         <Route path="/addInterview" component={AddInterview} />
+        <Route path="/addNotice" component={AddNotice} />
+
       </Switch>
     </>
   );

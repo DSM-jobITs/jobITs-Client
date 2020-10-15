@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./style";
 import 'babel-polyfill';
+import {Link} from "react-router-dom"
 import NoticeBox from "./noticeBox/NoticeBox";
 
 const Notice = () => {
@@ -27,6 +28,9 @@ const Notice = () => {
         <NoticeBox />
         <NoticeBox />
       </S.NoticeWarpper>
+      <Link to="/addNotice">
+        <S.AddButton>질문 추가하기</S.AddButton>
+      </Link>
     </S.MainWarpper>
   );
 };
