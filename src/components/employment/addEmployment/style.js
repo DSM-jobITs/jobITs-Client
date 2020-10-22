@@ -46,9 +46,9 @@ export const SubmitBtn = styled.button`
 `
 
 export const TextArea = styled.textarea`
-  width:60%;
+  width:63%;
   height: 130px;
-  padding: 20px 40px;
+  padding: 20px;
   margin:20px;
   font-size:1.4rem;
   resize:none;
