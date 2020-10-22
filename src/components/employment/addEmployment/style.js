@@ -44,3 +44,16 @@ export const SubmitBtn = styled.button`
   color: #fff;
   font-weight:bold; 
 `
+
+export const TextArea = styled.textarea`
+  width:60%;
+  height: 130px;
+  padding: 20px 40px;
+  margin:20px;
+  font-size:1.4rem;
+  resize:none;
+  ::placeholder{
+    font-size:1.2rem;
+    color: #D1D1D1;
+  }
+`
