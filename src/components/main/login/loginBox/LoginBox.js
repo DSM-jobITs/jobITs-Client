@@ -1,23 +1,26 @@
 import { doc } from 'prettier';
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./style";
 import axios from "axios";
-import { baseUrl } from '../../../../constant/index'
+import "babel-polyfill"
+import { minUrl } from '../../../../constant/index'
 
 const LoginBox = () => {
+  const [userId,setId] = useState("");
+  const [userPassword,setPassword] = useState("");
 
-  const onLogin = () => {
-    const loginInput = document.getElementById("loginInput").value;
-    const passwordInput = document.getElementById("passWordInput").value;
-
+  const onLogin = (e) => {
+    e.preventDefault();
+    
     const data = {
-      id : loginInput,
-      password : passwordInput
+      id: userId,
+      password: userPassword
     }
-    axios.post(baseUrl + "login", data)
+    axios.post(minUrl+"login",data)
     .then((res) => {
-      console.log(res);
-      localStorage.setItem(res.data.accessToken);
+      console.log("hello");
+      localStorage.token = res.data.accessToken;
+      localStorage.setItem('token',res.data.accessToken);
     })
     .catch((err) => {
       console.log(err);
@@ -28,8 +31,24 @@ const LoginBox = () => {
     <S.MainWrapper>
       <S.LoginName>welcome to the JobITs</S.LoginName>
       <S.LoginForm>
-        <S.LoginInput placeholder="email" type="text" id="loginInput" />
-        <S.LoginInput placeholder="password" type="password" id="passwordInput" />
+        <S.LoginInput 
+          placeholder="email" 
+          type="text"
+          id="loginInput" 
+          value={userId} 
+          onChange={({target: {value}})=>setId(value)}
+          required
+          />
+
+        <S.LoginInput 
+          placeholder="password" 
+          type="password" 
+          id="passwordInput" 
+          value={userPassword} 
+          onChange={({target: {value}})=>setPassword(value)}
+          required
+          />
+
         <S.SaveWarpper>
           <S.LoginSave type="checkbox" />
           <S.LoginSaveLabel>아이디 저장하기</S.LoginSaveLabel>

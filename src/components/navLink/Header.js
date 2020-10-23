@@ -33,6 +33,7 @@ const Header = () => {
         <Route path="/addNotice" component={AddNotice} />
         <Route path="/employment" component={Employment} />
         <Route path="/addEmployment" component={AddEmployment}/>
+        {/* <Route path="/password" component={} /> */}
       </Switch>
     </>
   );
