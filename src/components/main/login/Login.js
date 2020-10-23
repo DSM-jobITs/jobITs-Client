@@ -6,7 +6,8 @@ import * as S from "./style";
 const Login = () => {
   return (
     <S.ContentWarp>
-      <LoginBox />
+      {/* <LoginBox /> */}
+      <MainBox />
     </S.ContentWarp>
   );
 };

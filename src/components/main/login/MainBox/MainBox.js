@@ -3,9 +3,10 @@ import * as S from "./style"
 
 const MainBox = () => {
   return (
-    <div>
-      
-    </div>
+    <S.Mainwarpper>
+      <S.MainText>welcome to JobITs</S.MainText>
+      <S.Img src="src/img/Icon.png"></S.Img>
+    </S.Mainwarpper>
   );
 };
 
