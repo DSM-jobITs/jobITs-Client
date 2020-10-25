@@ -8,6 +8,7 @@ import Notice from "../notice/Notice"
 import AddNotice from "../notice/addNotice/AddNotice"
 import Employment from "../employment/Employment"
 import AddEmployment from "../employment/addEmployment/AddEmployment"
+import Password from "../password/Password"
 
 const Header = () => {
 
@@ -33,7 +34,7 @@ const Header = () => {
         <Route path="/addNotice" component={AddNotice} />
         <Route path="/employment" component={Employment} />
         <Route path="/addEmployment" component={AddEmployment}/>
-        {/* <Route path="/password" component={} /> */}
+        <Route path="/password" component={Password} />
       </Switch>
     </>
   );
