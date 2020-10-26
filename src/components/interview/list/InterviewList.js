@@ -39,7 +39,15 @@ const InterviewList = () => {
           <S.AddButton>질문 추가하기</S.AddButton>
         </Link>
       </S.ListWarppper>
-
+      <S.PageNum>
+        <S.Button>
+          <img src="src/img/Left.png"/>
+        </S.Button>
+        <S.P>{1}</S.P>
+        <S.Button>
+        <img src="src/img/Right.png"/>
+        </S.Button>
+      </S.PageNum>
     </S.MainWarpper>
   );
 };
