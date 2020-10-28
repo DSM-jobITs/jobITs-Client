@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "./style";
 import {Route, Switch, Link} from "react-router-dom"
 import MainContainer from "../../containers/MainContainer"
+import Company from "../../components/company/Company"
 import InterviewContainer from "../interview/InterviewContainer"
 import AddInterview from "../../components/interview/addInterview/AddInterview"
 import Notice from "../notice/Notice"
@@ -24,10 +25,13 @@ const Header = () => {
           <S.Category to="/interview">면접</S.Category>
           <S.Category to="/employment">취업사전</S.Category>
         </S.LinkWarp>
-        <S.Login>로그인</S.Login>
+        <Link to="/password">
+          <S.Login>비밀번호 변경</S.Login>
+        </Link>
       </S.NavWarp>
       <Switch>
         <Route path="/" exact={true} component={MainContainer} />
+        <Route path="/company" component={Company} />
         <Route path="/interview" component={InterviewContainer} />
         <Route path="/notice" component={Notice} />
         <Route path="/addInterview" component={AddInterview} />
