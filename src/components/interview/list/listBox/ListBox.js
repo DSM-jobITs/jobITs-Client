@@ -1,13 +1,13 @@
 import React from "react";
 import * as S from "./style";
 
-const ListBox = () => {
+const ListBox = ({content,createdAt,id}) => {
   return (
     <S.List>
       <S.ListContent>
-        질질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문질문문
+        {content}
       </S.ListContent>
-      <S.ListDate>2020-10-24</S.ListDate>
+      <S.ListDate>{createdAt}</S.ListDate>
     </S.List>
   );
 };
