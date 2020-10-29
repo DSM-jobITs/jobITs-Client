@@ -1,10 +1,13 @@
 import React from "react";
 import * as S from "./style";
+import axios from "axios"
 import 'babel-polyfill';
 import {Link} from "react-router-dom"
 import NoticeBox from "./noticeBox/NoticeBox";
 
 const Notice = () => {
+
+  
   return (
     <S.MainWarpper>
       <S.Header>

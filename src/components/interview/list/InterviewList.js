@@ -4,7 +4,7 @@ import 'babel-polyfill';
 import {Link} from "react-router-dom";
 import ListBox from "./listBox/ListBox";
 import * as S from "./style";
-import { junUrl } from '../../../constant/index'
+import { junUrl } from '../../../constant/index';
 
 const InterviewList = () => {
   const [contents,setContents] = useState([]);
