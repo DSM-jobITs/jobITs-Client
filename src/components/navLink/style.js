@@ -42,7 +42,7 @@ export const Category = styled(NavLink)`
 `;
 
 export const Login = styled.button`
-  width: 95px;
+  width: 110px;
   height: 37px;
   margin-right: 100px;
   border: 4px solid #7b598a;

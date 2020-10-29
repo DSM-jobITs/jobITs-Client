@@ -23,14 +23,16 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     outline: none;
+    border: none;
   }
 
-  p::selection, li::selection {
+  *::selection {
     background-color: #7f27cf;
     color: #ffffff;
   }
 
   button {
+    border: none;
     cursor:pointer;
   }
 `;

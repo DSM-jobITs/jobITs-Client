@@ -34,7 +34,7 @@ export const LastText = styled.p`
   margin-top: 5px;
 `;
 
-export const FieldWarpper = styled.div`
+export const FieldForm = styled.form`
   display: flex;
   width: 1000px;
   height: 450px;
@@ -43,12 +43,13 @@ export const FieldWarpper = styled.div`
   justify-content: flex-start;
 `;
 
-export const FieldItem = styled.div`
+export const FieldItem = styled.input`
   display: flex;
   align-items:center;
   justify-content:center;
   min-width: 200px;
   height: 60px;
+  border: none;
   border-radius: 15px;
   background: #ffffff;
   box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.3);

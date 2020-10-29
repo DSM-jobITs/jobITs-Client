@@ -61,3 +61,24 @@ export const AddButton = styled.button`
   border-radius: 15px;
   border: none;
 `;
+
+export const PageNum = styled.div`
+  display: flex;
+  width: 140px;
+  height:50px;
+  margin-top:-65px;
+  justify-content:space-between;
+  align-items:center;
+`
+
+export const Button = styled.button`
+  width:50px;
+  height:100%;
+  background:none;
+`
+
+export const P = styled.p`
+  font-size:1rem;
+  font-weight:bold;
+  margin-top:7px;
+`

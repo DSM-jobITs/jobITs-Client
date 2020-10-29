@@ -32,15 +32,15 @@ export const PreviewLabel = styled.p`
   color: #494949;
 `;
 
-export const NoticeButton = styled.img`
-  width: 25px;
-  height: 25px;
-  margin-top: 30px;
-  margin-right: 15px;
+export const NoticeButton = styled.button`
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+  margin-right: 30px;
   outline: none;
   border: none;
   border-radius:50%;
-  cursor: pointer;
+  background:none;
 `;
 
 export const NoticeHeader = styled.div`
