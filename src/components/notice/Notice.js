@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./style";
 import axios from "axios"
 import 'babel-polyfill';
@@ -6,8 +6,15 @@ import {Link} from "react-router-dom"
 import NoticeBox from "./noticeBox/NoticeBox";
 
 const Notice = () => {
+  const [contents,setContents] = useState([]);
 
-  
+  useEffect(()=>{
+    axios.get("url")
+    .then(response => {
+      setContents(response.data.lists)
+    });
+  },[])
+
   return (
     <S.MainWarpper>
       <S.Header>
@@ -24,12 +31,13 @@ const Notice = () => {
           <S.HeaderTitle>제목</S.HeaderTitle>
           <S.HeaderDate>등록일</S.HeaderDate>
         </S.NoticeHeader>
-        <NoticeBox />
-        <NoticeBox />
-        <NoticeBox />
-        <NoticeBox />
-        <NoticeBox />
-        <NoticeBox />
+        {contents && contents.map(list => {
+          return (
+            <NoticeBox content={list.title}
+            createdAt={list.createdAt}
+            key={list.id} />
+          );
+        })}
         <Link to="/addNotice">
         <S.AddButton>질문 추가하기</S.AddButton>
       </Link>
