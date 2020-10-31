@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from "./style"
 import EmpItem from "./EmpItem"
+import axios from "axios"
+import "babel-polyfill"
 import {Link} from "react-router-dom"
 
 const Employment = () => {
+  const [contents, setContents] = useState([]);
+
+  useEffect(()=>{
+    axios.get("url")
+    .then(response => {
+      setContents(response.data.lists)
+    });
+  },[])
   return (
       <S.Warpper>
         <S.Header>
