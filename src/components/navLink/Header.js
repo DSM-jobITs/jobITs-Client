@@ -10,6 +10,7 @@ import AddNotice from "../notice/addNotice/AddNotice"
 import Employment from "../employment/Employment"
 import AddEmployment from "../employment/addEmployment/AddEmployment"
 import Password from "../password/Password"
+import CompanyDetailView from "../company/CompanyDetailView";
 
 const Header = () => {
 
@@ -31,7 +32,8 @@ const Header = () => {
       </S.NavWarp>
       <Switch>
         <Route path="/" exact={true} component={MainContainer} />
-        <Route path="/company" component={Company} />
+        <Route exact path="/company" component={Company} />
+        <Route exact path="/company/:id" render={({ location }) => (<CompanyDetailView location={location} /> )} />
         <Route path="/interview" component={InterviewContainer} />
         <Route path="/notice" component={Notice} />
         <Route path="/addInterview" component={AddInterview} />
