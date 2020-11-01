@@ -4,7 +4,7 @@ export const Warpper = styled.div`
   display: flex;
   width: 100%;
   min-height: 100vh;
-  background:#F6F6F6;
+  background: ${props => props.company ? '#FFFFFF' : '#F6F6F6;'};
   flex-direction:column;
   justify-content:flex-start;
   align-items:center;
