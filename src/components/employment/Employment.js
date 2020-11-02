@@ -8,12 +8,12 @@ import {Link} from "react-router-dom"
 const Employment = () => {
   const [contents, setContents] = useState([]);
 
-  useEffect(()=>{
-    axios.get("url")
-    .then(response => {
-      setContents(response.data.lists)
-    });
-  },[])
+  // useEffect(()=>{
+  //   axios.get("url")
+  //   .then(response => {
+  //     setContents(response.data.lists)
+  //   });
+  // },[])
   return (
       <S.Warpper>
         <S.Header>

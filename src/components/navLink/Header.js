@@ -11,6 +11,7 @@ import Employment from "../employment/Employment"
 import AddEmployment from "../employment/addEmployment/AddEmployment"
 import Password from "../password/Password"
 import CompanyDetailView from "../company/CompanyDetailView";
+import NoticeDetailView from "../notice/NoticeDetailView";
 
 const Header = () => {
 
@@ -31,11 +32,12 @@ const Header = () => {
         </Link>
       </S.NavWarp>
       <Switch>
-        <Route path="/" exact={true} component={MainContainer} />
+        <Route exact path="/" component={MainContainer} />
         <Route exact path="/company" component={Company} />
         <Route exact path="/company/:id" render={({ location }) => (<CompanyDetailView location={location} /> )} />
         <Route path="/interview" component={InterviewContainer} />
-        <Route path="/notice" component={Notice} />
+        <Route exact path="/notice" component={Notice} />
+        <Route exact path="/notice/1" render={({location}) => (<NoticeDetailView location={location} /> )} />
         <Route path="/addInterview" component={AddInterview} />
         <Route path="/addNotice" component={AddNotice} />
         <Route path="/employment" component={Employment} />
