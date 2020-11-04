@@ -3,11 +3,12 @@ import LoginBox from "./loginBox/LoginBox";
 import MainBox from "./MainBox/MainBox";
 import * as S from "./style";
 
-const Login = () => {
+const Login = ({isLogin, setIsLogin}) => {
+  {console.log(isLogin)}
   return (
     <S.ContentWarp>
-      {/* <LoginBox /> */}
-      <MainBox />
+    {isLogin ?
+      <MainBox /> : <LoginBox setIsLogin={setIsLogin} /> }
     </S.ContentWarp>
   );
 };
