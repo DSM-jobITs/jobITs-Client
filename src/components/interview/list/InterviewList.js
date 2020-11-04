@@ -4,15 +4,16 @@ import 'babel-polyfill';
 import {Link} from "react-router-dom";
 import ListBox from "./listBox/ListBox";
 import * as S from "./style";
-import { junUrl } from '../../../constant/index';
+import { baseUrl } from '../../../constant/index';
 
 const InterviewList = () => {
   const [contents,setContents] = useState([]);
   const [field,setField] = useState("");
 
   const token = localStorage.getItem("accessToken");
+
   useEffect(()=>{
-    axios.get(junUrl + "interview?page=1")
+    axios.get(baseUrl + "interview?page=1")
     .then(response => {
       setContents(response.data.lists)
     });

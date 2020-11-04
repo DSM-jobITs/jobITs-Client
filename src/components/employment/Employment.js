@@ -4,16 +4,11 @@ import EmpItem from "./EmpItem"
 import axios from "axios"
 import "babel-polyfill"
 import {Link} from "react-router-dom"
+import { baseUrl } from "../../constant/index"
 
 const Employment = () => {
   const [contents, setContents] = useState([]);
 
-  // useEffect(()=>{
-  //   axios.get("url")
-  //   .then(response => {
-  //     setContents(response.data.lists)
-  //   });
-  // },[])
   return (
       <S.Warpper>
         <S.Header>
