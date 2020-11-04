@@ -22,24 +22,24 @@ export const Header = styled.div`
   margin-top: 70px;
   display: flex;
   width: 60%;
-  height: 100px;
+  height: 6.25rem;
   align-items:center;
 `
 
 export const Title = styled.p`
-  width: 300px;
+  width: 18.75rem;
   font-size:2rem;
   font-weight: bold;
   text-align:center;
-  margin-left:-80px;
+  margin-left:-5rem;
 `
 
 export const SubmitBtn = styled.button`
-  width:  120px;
-  height: 40px;
-  margin-left:20px;
+  width:  7.5rem;
+  height: 2.5rem;
+  margin-left:1.25rem;
   border: none;
-  border-radius:15px;
+  border-radius:0.938rem;
   background: #4B4B4B;
   color: #fff;
   font-weight:bold; 
@@ -47,9 +47,9 @@ export const SubmitBtn = styled.button`
 
 export const TextArea = styled.textarea`
   width:63%;
-  height: 130px;
-  padding: 20px;
-  margin:20px;
+  height: 8.125rem;
+  padding: 1.25rem;
+  margin:1.25rem;
   font-size:1.4rem;
   resize:none;
   ::placeholder{
