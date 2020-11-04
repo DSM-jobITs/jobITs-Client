@@ -9,8 +9,9 @@ export const CompanysWarpper = styled.div`
 `;
 
 export const Container = styled.div`
-  width : 23%;
+  width : ${props => props.passer ? '100%' : '23%'};
   height : 30%;
+  border-top : ${props => props.passer ? '1px solid #BDBDBD' : 'none'};
 `;
 
 export const ImgContainer = styled.img`
@@ -47,7 +48,7 @@ export const Header = styled.div`
 export const DetailContainer = styled.section`
   width : 56.94rem;
   height : 100%;
-  border-top : ${props => props.passer ? '1px solid #BDBDBD' : 'none'};
+  // border-top : ${props => props.passer ? '1px solid #BDBDBD' : 'none'};
   margin : ${props => props.detail ? '10rem auto 0 auto' : ''};
   padding : ${props => {
     if (props.passer) return '2rem 0 0 1.2rem';
@@ -71,11 +72,10 @@ export const CompanyColorText = styled.span`
 `;
 
 export const Passer = styled.h3`
-
 `;
 
 export const PasserText = styled.p`
-  margin-top : ${props => props.first ? '2rem' : ''};
+  // margin-top : ${props => props.first ? '2rem' : ''};
 `;
 
 export const div = styled.div``;
@@ -94,4 +94,10 @@ export const Button = styled.button`
     background-color : #CCCCCC;
     transition : 0.3s
 }
+`;
+
+export const AddText = styled.p`
+  margin-left : 0.3rem;
+  font-size : 0.8rem;
+  color : #707070;
 `;
