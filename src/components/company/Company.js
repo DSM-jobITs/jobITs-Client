@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as S from "../employment/style";
 import * as C from "./style";
 import CompanyItem from "./CompanyItem";
+import { baseUrl } from "../../constant/index";
 import axios from "axios";
 
 const Company = () => {
@@ -15,7 +16,7 @@ const Company = () => {
 
   useEffect(() => {
     axios
-      .get("baseUrl/company?page=" + 1, config)
+      .get(baseUrl + "company?page=" + 1, config)
       .then((res) => {
         console.log(res);
         setList(res.data.lists);
