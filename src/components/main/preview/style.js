@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainWrapper = styled.div`
   width: 100%;
-  height: 400px;
+  height: 25rem;
   overflow: hidden;
   background: #fff;
   display: flex;
@@ -11,22 +11,22 @@ export const MainWrapper = styled.div`
 `;
 
 export const PreviewWrapper = styled.div`
-  width: 1100px;
-  height: 250px;
+  width: 68.75rem;
+  height: 15.625rem;
   background: #fff;
 `;
 
 export const TopInner = styled.div`
   display: flex;
-  width: 1100px;
-  height: 60px;
+  width: 68.75rem;
+  height: 3.75rem;
   justify-content: space-between;
   align-items: center;
 `;
 
 export const PreviewLabel = styled.p`
   display: inline-block;
-  width: 100px;
+  width: 6.25rem;
   font-weight: bold;
   font-size: 2.5rem;
   color: #494949;
