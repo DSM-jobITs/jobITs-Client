@@ -57,7 +57,8 @@ export const Box = styled.div`
 `
 
 export const Question = styled.p`
-  font-size:1.1rem;
+  font-size:1.2rem;
+  font-weight:bold;
   width:100%;
   height: 1.875rem;
   margin:0;
@@ -65,9 +66,9 @@ export const Question = styled.p`
 export const ExtendBox = styled.div`
   display: ${props => props.isClick ? "flex" : "none"};
   width: 100%;
-  height: 10rem;
+  min-height: 10rem;
   padding: 0 2.5rem;
-  background: #e3c7eb;
+  background: #f8ebff;
 `
 
 export const Answer = styled.p`

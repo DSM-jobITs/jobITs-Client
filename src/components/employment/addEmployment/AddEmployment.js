@@ -48,11 +48,14 @@ const AddEmployment = () => {
                     name="question" 
                     placeholder="질문을 입력해주세요"
                     value={question}
+                    maxLength="40"
                     onChange={handleQuestion}
         />
         <S.TextArea type="text" 
                     name="answer" 
                     placeholder="답변을 입력해주세요"
+                    value={answer}
+                    maxLength="2000"
                     onChange={handleAnswer}
         />
       </S.Warpper>
