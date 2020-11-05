@@ -8,6 +8,7 @@ const NoticeItem = () => {
     <S.Warpper>
       <S.Header>
         <S.Title>공지사항</S.Title>
+        <N.Button>목록으로</N.Button>
       </S.Header>
       <N.TitleBox>
         <N.Title>공지사항 제목입니다. 클릭 시 들어오게 됩니다.</N.Title>
@@ -18,7 +19,6 @@ const NoticeItem = () => {
       </N.Viewer>
       <N.FileBox>
         <N.P>첨부파일</N.P>
-        <N.File>공지사항용.hwp</N.File>
       </N.FileBox>
     </S.Warpper>
   );
