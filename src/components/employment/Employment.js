@@ -8,13 +8,22 @@ import { baseUrl } from "../../constant/index"
 
 const Employment = () => {
   const [contents, setContents] = useState([]);
+  const [isClick,setIsClick] = useState(false)
+  const config = {
+    headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
+  };
+  const handleClick = ( ) => {
+    isClick ? setIsClick(false) : setIsClick(true)
+  }
 
-  useEffect(()=>{
-    axios.get(baseUrl + "employment/1")
+  useEffect(()=>{ 
+    axios.get(baseUrl + "employment/1",config)
     .then(response => {
       setContents(response.data.lists)
+      console.log(localStorage.getItem("token"));
     });
   },[])
+
   return (
       <S.Warpper>
         <S.Header>
@@ -23,14 +32,18 @@ const Employment = () => {
             <S.AddQuestion>추가하기</S.AddQuestion>
           </Link>
         </S.Header>
-        {/* {contents && contents.map(list => {
+        {contents && contents.map(list => {
           return (
-            <EmpItem question={list.qestion}
-            answer={list.answer}
-            key={list.id} />
+            <S.Div onClick={handleClick}>
+              <EmpItem 
+                question={list.question}
+                answer={list.answer}
+                key={list.id}
+                isClick={isClick}
+              />  
+            </S.Div>
           );
-        })} */}
-        <EmpItem question="이것은 질문입니다" answer="이건 답변이구연"/>
+        })}
       </S.Warpper>
   );
 };

@@ -37,10 +37,17 @@ export const AddQuestion = styled.button`
   color: #fff;
   font-weight:bold; 
 `
+export const Div = styled.div`
+  display: flex;
+  width: 50%;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom: 1rem;
+`
 
 export const Box = styled.div`
   display: flex;
-  width: 60%;
+  width: 100%;
   height: 5rem;
   align-items:center;
   background: #F7DCFF;
@@ -51,17 +58,16 @@ export const Box = styled.div`
 
 export const Question = styled.p`
   font-size:1.1rem;
-  width:80%;
+  width:100%;
   height: 1.875rem;
   margin:0;
 `
 export const ExtendBox = styled.div`
-  display: flex;
-  width: 60%;
-  height: 18.75rem;
+  display: ${props => props.isClick ? "flex" : "none"};
+  width: 100%;
+  height: 10rem;
   padding: 0 2.5rem;
   background: #e3c7eb;
-  margin-bottom:2.5rem;
 `
 
 export const Answer = styled.p`

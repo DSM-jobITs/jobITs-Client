@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as S from "./style"
 import axios from "axios"
 import "babel-polyfill"
+import {useHistory} from "react-router-dom"
 import {baseUrl} from "../../../constant/index"
 
 const AddEmployment = () => {
@@ -19,10 +20,15 @@ const AddEmployment = () => {
     axios.post(baseUrl + "employment",data,config)
     .then((res)=>{
       console.log(res);
+      alert("성공적으로 등록되었습니다.");
+      history.push("/employment");
     }).catch(err=>{
       console.log(err);
     })
+    
   }
+
+  let history = useHistory();
 
   const handleQuestion = (e) => {
     setQuestion(e.target.value)
