@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import * as S from "../employment/style";
 import * as C from "./style";
 import CompanyPasser from "./CompanyPasser";
+import { baseUrl } from "../../constant/index";
 import axios from "axios";
 
 const CompanyDetailView = ({ id, location }) => {
@@ -17,7 +18,7 @@ const CompanyDetailView = ({ id, location }) => {
 
   useEffect(() => {
     axios
-      .get("baseUrl/company/" + location.state.id, config)
+      .get(baseUrl + "company/" + location.state.id, config)
       .then((res) => {
         console.log(res);
         console.log("hi");
