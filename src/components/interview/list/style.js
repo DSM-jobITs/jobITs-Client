@@ -48,3 +48,37 @@ export const ListInner = styled.div`
   width: 100%;
   height: 520px;
 `;
+
+export const AddButton = styled.button`
+  position: relative;
+  width: 150px;
+  height: 45px;
+  float: right;
+  margin-right: 65px;
+  margin-top: -1 0px;
+  background: #e0d5e0;
+  box-shadow: 1px 3px 5px -1px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  border: none;
+`;
+
+export const PageNum = styled.div`
+  display: flex;
+  width: 140px;
+  height:50px;
+  margin-top:-65px;
+  justify-content:space-between;
+  align-items:center;
+`
+
+export const Button = styled.button`
+  width:50px;
+  height:100%;
+  background:none;
+`
+
+export const P = styled.p`
+  font-size:1rem;
+  font-weight:bold;
+  margin-top:7px;
+`

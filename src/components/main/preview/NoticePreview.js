@@ -8,7 +8,9 @@ const NoticePreview = () => {
       <S.PreviewWrapper>
         <S.TopInner>
           <S.PreviewLabel>공지</S.PreviewLabel>
-          <S.NoticeButton />
+          <S.NoticeButton>
+            <img src="/src/img/Plus.png" />
+          </S.NoticeButton>
         </S.TopInner>
         <S.NoticeHeader>
           <S.HeaderInner>제목</S.HeaderInner>

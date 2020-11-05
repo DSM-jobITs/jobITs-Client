@@ -8,7 +8,11 @@
     "build": "webpack"
   },
   "dependencies": {
+    "axios": "^0.20.0",
+    "babel-polyfill": "^6.26.0",
     "file-loader": "^6.1.0",
+    "jodit": "^3.4.29",
+    "jodit-react": "^1.0.66",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -22,6 +26,7 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.1",
     "html-webpack-plugin": "^4.3.0",
+    "prettier": "^2.1.2",
     "react-hot-loader": "^4.12.21",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",

@@ -12,12 +12,13 @@ const Footer = () => {
         <S.PartWarpper>
           <S.Part>Server</S.Part>
           <S.Member>김세준</S.Member>
-          <S.Member>신두평</S.Member>
           <S.Member>서민준</S.Member>
+          <S.Member>신두평</S.Member>
         </S.PartWarpper>
         <S.PartWarpper>
           <S.Part>Frontend</S.Part>
           <S.Member>배길준</S.Member>
+          <S.Member>신서림</S.Member>
         </S.PartWarpper>
         <S.PartWarpper>
           <S.Part>Design</S.Part>

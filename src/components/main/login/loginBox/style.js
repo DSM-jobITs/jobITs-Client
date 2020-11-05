@@ -24,7 +24,7 @@ export const LoginName = styled.p`
   margin-bottom: 10px;
 `;
 
-export const LoginWrapper = styled.form`
+export const LoginForm = styled.form`
   display: flex;
   width: 400px;
   height: 60%;
