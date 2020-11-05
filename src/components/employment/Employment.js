@@ -17,7 +17,7 @@ const Employment = () => {
   }
 
   useEffect(()=>{ 
-    axios.get(baseUrl + "employment/1",config)
+    axios.get(baseUrl + "employment",config)
     .then(response => {
       setContents(response.data.lists)
       console.log(localStorage.getItem("token"));
