@@ -34,7 +34,7 @@ export const Title = styled.p`
   margin-left:-5rem;
 `
 
-export const SubmitBtn = styled.button`
+export const SubmitBtn = styled.input`
   width:  7.5rem;
   height: 2.5rem;
   margin-left:1.25rem;
@@ -43,6 +43,7 @@ export const SubmitBtn = styled.button`
   background: #4B4B4B;
   color: #fff;
   font-weight:bold; 
+  cursor:pointer;
 `
 
 export const TextArea = styled.textarea`

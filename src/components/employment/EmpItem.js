@@ -1,16 +1,18 @@
 import React from 'react';
 import * as S from "./style";
 
-const EmpItem = () => {
-
+const EmpItem = ({question, answer}) => {
+  const handleClick = (e) => {
+    
+  }
   return (
     <>
       <S.Box>
-        <S.Question>이건 박스!</S.Question>
+        <S.Question onClick={handleClick}>{question}</S.Question>
         <img src="/src/img/Dropdown.png"/>
       </S.Box>
       <S.ExtendBox>
-        <S.Answer>어찌되긴 머 잘되겠죠</S.Answer>
+        <S.Answer>{answer}</S.Answer>
       </S.ExtendBox>
     </>
   );
