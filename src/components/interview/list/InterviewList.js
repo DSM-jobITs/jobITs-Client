@@ -4,13 +4,14 @@ import 'babel-polyfill';
 import {Link} from "react-router-dom";
 import ListBox from "./listBox/ListBox";
 import * as S from "./style";
-import { baseUrl } from '../../../constant/index'
+import { baseUrl } from '../../../constant/index';
 
 const InterviewList = () => {
   const [contents,setContents] = useState([]);
   const [field,setField] = useState("");
 
   const token = localStorage.getItem("accessToken");
+
   useEffect(()=>{
     axios.get(baseUrl + "interview?page=1")
     .then(response => {
@@ -39,7 +40,15 @@ const InterviewList = () => {
           <S.AddButton>질문 추가하기</S.AddButton>
         </Link>
       </S.ListWarppper>
-
+      <S.PageNum>
+        <S.Button>
+          <img src="src/img/Left.png"/>
+        </S.Button>
+        <S.P>{1}</S.P>
+        <S.Button>
+        <img src="src/img/Right.png"/>
+        </S.Button>
+      </S.PageNum>
     </S.MainWarpper>
   );
 };
