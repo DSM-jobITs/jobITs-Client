@@ -1,15 +1,14 @@
-import React, { Fragment } from "react";
-import NavLinkContainer from "./navLink/NavLinkContainer";
+import React, { Fragment,useState } from "react";
 import PreviewContainer from "./main/preview/PreviewContainer";
 import LoginContainer from "./main/login/LoginContainer";
 import IntroContainer from "./main/intro/IntroContainer";
 import FooterContainer from "./main/footer/FooterContainer";
 
-const MainContainer = () => {
+const MainContainer = ({isLogin,setIsLogin}) => {
+  {console.log(isLogin)}
   return (
     <Fragment>
-      <NavLinkContainer />
-      <LoginContainer />
+      <LoginContainer isLogin={isLogin} setIsLogin={setIsLogin}/>
       <PreviewContainer />
       <IntroContainer />
       <FooterContainer />
