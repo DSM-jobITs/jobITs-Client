@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./style";
+import axios from "axios"
 import 'babel-polyfill';
 import {Link} from "react-router-dom"
 import NoticeBox from "./noticeBox/NoticeBox";
+import { baseUrl } from "../../constant/index"
 
 const Notice = () => {
+  const [contents,setContents] = useState([]);
+
+  // useEffect(()=>{
+  //   axios.get(baseUrl + "/notice")
+  //   .then(response => {
+  //     setContents(response.data.lists)
+  //   });
+  // },[])
+
   return (
     <S.MainWarpper>
       <S.Header>

@@ -5,13 +5,14 @@ import axios from "axios";
 import "babel-polyfill"
 import { minUrl } from '../../../../constant/index'
 
-const LoginBox = () => {
+const LoginBox = ({setIsLogin}) => {
   const [userId,setId] = useState("");
   const [userPassword,setPassword] = useState("");
 
+
   const onLogin = (e) => {
     e.preventDefault();
-    
+    setIsLogin(true);
     const data = {
       id: userId,
       password: userPassword
