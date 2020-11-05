@@ -2,19 +2,23 @@ import React from "react";
 import * as C from "./style";
 import { Link } from "react-router-dom";
 
-const CompanyItem = ({ id }) => {
+const CompanyItem = ({ id, name, logo, count }) => {
+  console.log(id);
   return (
-    <C.Container>
+    <div>
       <Link
         style={{ textDecoration: "none" }}
         to={{
           pathname: `/company/${id}`,
+          state: {
+            id,
+          },
         }}
       >
-        <C.ImgContainer src=""></C.ImgContainer>
+        <C.ImgContainer src={logo}></C.ImgContainer>
       </Link>
-      <C.CompanysTitle>카카오톡</C.CompanysTitle>
-    </C.Container>
+      <C.CompanysTitle>{name}</C.CompanysTitle>
+    </div>
   );
 };
 
