@@ -1,17 +1,15 @@
-import React from "react";
+import React,{useState} from "react";
 import { hot } from "react-hot-loader";
 import { BrowserRouter } from "react-router-dom";
-import Routing from "./Routing";
 import { GlobalStyle } from "./GlobalStyle";
-import NavLinkContainer from "./containers/navLink/NavLinkContainer";
-import AddInterview from "./components/interview/addInterview/AddInterview";
+import Header from "./components/navLink/Header"
+import MainContainer from './containers/MainContainer';
 
 const App = () => {
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <NavLinkContainer />
-      <AddInterview />
+      <Header />
     </BrowserRouter>
   );
 };

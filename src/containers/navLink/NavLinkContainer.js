@@ -1,8 +1,8 @@
 import React from "react";
-import NavLink from "../../components/navLink/Header";
+import Header from "../../components/navLink/Header";
 
 const NavLinkContainer = () => {
-  return <NavLink />;
+  return <Header />;
 };
 
 export default NavLinkContainer;

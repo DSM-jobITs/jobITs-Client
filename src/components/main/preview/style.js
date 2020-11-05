@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainWrapper = styled.div`
   width: 100%;
-  height: 400px;
+  height: 25rem;
   overflow: hidden;
   background: #fff;
   display: flex;
@@ -11,37 +11,36 @@ export const MainWrapper = styled.div`
 `;
 
 export const PreviewWrapper = styled.div`
-  width: 1100px;
-  height: 250px;
+  width: 68.75rem;
+  height: 15.625rem;
   background: #fff;
 `;
 
 export const TopInner = styled.div`
   display: flex;
-  width: 1100px;
-  height: 60px;
+  width: 68.75rem;
+  height: 3.75rem;
   justify-content: space-between;
   align-items: center;
 `;
 
 export const PreviewLabel = styled.p`
   display: inline-block;
-  width: 100px;
+  width: 6.25rem;
   font-weight: bold;
   font-size: 2.5rem;
   color: #494949;
 `;
 
 export const NoticeButton = styled.button`
-  width: 25px;
-  height: 25px;
-  margin-top: 30px;
-  margin-right: 15px;
-  background: #000;
-  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+  margin-right: 30px;
   outline: none;
   border: none;
-  cursor: pointer;
+  border-radius:50%;
+  background:none;
 `;
 
 export const NoticeHeader = styled.div`
