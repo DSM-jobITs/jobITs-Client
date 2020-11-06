@@ -3,13 +3,11 @@ import NoticeList from "./NoticeList/NoticeList";
 import * as S from "./style";
 import axios from "axios"
 import "babel-polyfill"
-import {baseUrl} from "../../../constant/index"
+import {baseUrl, config} from "../../../constant/index"
 
 const NoticePreview = () => {
   const [contents,setContents] = useState([]);
-  const config = {
-    headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
-  };
+
   useEffect(()=>{
     axios.get(baseUrl + "notice?page=1",config)
     .then(response => {
