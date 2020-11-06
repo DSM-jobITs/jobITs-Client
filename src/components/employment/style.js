@@ -13,7 +13,7 @@ export const Warpper = styled.div`
 export const Header = styled.div`
   margin-top: 4.375rem;
   display: flex;
-  width: 60%;
+  width: 55%;
   height: 6.25rem;
   justify-content:space-between;
   align-items:center;
@@ -37,6 +37,18 @@ export const AddQuestion = styled.button`
   color: #fff;
   font-weight:bold; 
 `
+
+export const Delete = styled.button`
+  width:  7.5rem;
+  height: 2.5rem;
+  border: none;
+  margin-left:1.25rem;
+  border-radius:0.938rem;
+  background: #4B4B4B;
+  color: #fff;
+  font-weight:bold; 
+`
+
 export const Div = styled.div`
   display: flex;
   width: 50%;
@@ -63,6 +75,13 @@ export const Question = styled.p`
   height: 1.875rem;
   margin:0;
 `
+
+export const Img = styled.img`
+  transition: all 0.3s ease-in-out;
+  transform: ${prop => prop.isClick ? "rotate(180deg)":"rotate(0deg)"};
+
+`
+
 export const ExtendBox = styled.div`
   display: ${props => props.isClick ? "flex" : "none"};
   width: 100%;

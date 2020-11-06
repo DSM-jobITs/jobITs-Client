@@ -1,13 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
 import * as S from "./style";
 
-const EmpItem = ({question, answer, isClick}) => {
-  console.log(isClick)
+const EmpItem = ({question, answer, id}) => {
+  const [isClick,setIsClick] = useState(false);
+  const handleClick = ( ) => {
+    (isClick) ? setIsClick(false) : setIsClick(true)
+  }
+
   return (
     <>
       <S.Box>
-        <S.Question>{question}</S.Question>
-        <img src="/src/img/Dropdown.png"/>
+        <S.Question onClick={handleClick}>{question}</S.Question>
+        <S.Img src="/src/img/Dropdown.png" isClick={isClick}/>
       </S.Box>
       <S.ExtendBox isClick={isClick}>
         <S.Answer>{answer}</S.Answer>
