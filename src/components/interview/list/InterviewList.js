@@ -15,11 +15,11 @@ const InterviewList = ({field}) => {
   };
   console.log(field);
   useEffect(()=>{
-    axios.get(baseUrl + "interview?page="+page+"&field="+fields,config)
+    axios.get(baseUrl + "interview?page="+page+"&field="+field,config)
     .then(response => {
       setContents(response.data.lists)
     });
-  },[field])
+  },[field,page])
 
   const onDeletePage = () => {
     if(page>1) setPage(state => state - 1);
@@ -31,7 +31,7 @@ const InterviewList = ({field}) => {
   return ( 
     <S.MainWarpper>
       <S.ListWarppper>
-        <S.FilterText>분야 무관 ({contents ? contents.length : 0})</S.FilterText>
+        <S.FilterText>{field ? field : "분야 무관"} ({contents ? contents.length : 0})</S.FilterText>
         <S.ListHeader>
           <S.HeaderTitle>면접</S.HeaderTitle>
           <S.HeaderDate>등록일</S.HeaderDate>
@@ -53,7 +53,7 @@ const InterviewList = ({field}) => {
         <S.Button onClick={onDeletePage}>
           <img src="src/img/Left.png"/>
         </S.Button>
-        <S.P>{1}</S.P>
+        <S.P>{page}</S.P>
         <S.Button onClick={onAddPage}>
         <img src="src/img/Right.png"/>
         </S.Button>

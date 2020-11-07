@@ -1,5 +1,7 @@
 import React from "react";
 import * as S from "./style";
+import axios from "axios"
+import "babel-polyfill"
 
 const Search = () => {
   return (

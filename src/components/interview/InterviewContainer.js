@@ -5,14 +5,20 @@ import Search from "./search/Search"
 
 const InterviewContainer = () => {
   const [field,setField] = useState();
+  const [keyword,setKeyword] = useState();
+
   const submitField = (field) => {
     setField(field)
+  }
+
+  const submitKeyword = (keyword) => {
+    setKeyword(keyword)
   }
   return (
     <>
       <Field submitField={submitField}/>
-      <Search />
-      <InterviewList field={field} />
+      <Search submitKeyword={submitKeyword}/>
+      <InterviewList field={field} keyword={keyword}/>
     </>
   );
 };
