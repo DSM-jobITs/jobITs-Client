@@ -88,13 +88,13 @@ export const HeaderDate = styled.p`
 `;
 
 export const AddButton = styled.button`
-  width: 150px;
-  height: 45px;
+  width: ${props => props.delete ? '6.5rem' : '8.5rem'};
+  height: 2.5rem;
   float: right;
-  margin-right: 65px;
-  background: #e0d5e0;
+  background: ${props => props.delete ? '#C4A1C4' : '#e0d5e0'};
   box-shadow: 1px 3px 5px -1px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border-radius: 1rem;
+  margin-left : 1rem;
   border: none;
 `;
 
@@ -104,7 +104,6 @@ export const PageNum = styled.div`
   height:50px;
   justify-content:space-between;
   align-items:center;
-  margin-top:-20px;
 `
 
 export const Button = styled.button`
