@@ -3,20 +3,24 @@ import Question from "./question/Question";
 import axios from "axios";
 import 'babel-polyfill';
 import * as S from "./style";
-import {junUrl} from "../../../constant/index"
+import {baseUrl} from "../../../constant/index"
 
 const AddInterview = () => {
-  const [question,setQuestion] = useState(1);
+  const [q,setQ] = useState([]);
 
   const onClick = (e) => {
     e.preventDefault();
-    setQuestion(question + 1);
-    const hello=['hello','hieieoow'];
-    const tlqkf = {
-      contents:hello,
-      field:"test"
-    }
-    axios.post(junUrl+"interview",tlqkf);
+    axios.post(baseUrl+"interview");
+  }
+
+  const handleAddQue = (e) => {
+    // e.preventDefault();
+    // import("./question/Question").then(({Question})=>{
+    //   const position = q.length + 1;
+    //   console.log(position)
+    //   const newQuestion = <Question key={position} />
+    //   // setQ({q:[...q,newQuestion]})
+    // })
   }
 
   return (
@@ -30,9 +34,9 @@ const AddInterview = () => {
           </S.SelectDrop>
         </S.Header>
         <S.InputWarpper>
-        <Question/>
+        {/* {q.map(q => {q})} */}
         </S.InputWarpper>
-        <S.AddInputBtn onClick={onClick}>질문 추가하기</S.AddInputBtn>
+        <S.AddInputBtn onClick={handleAddQue}>질문 추가하기</S.AddInputBtn>
       </S.Warpper>
     </S.MainForm>
   );
