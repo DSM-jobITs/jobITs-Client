@@ -6,7 +6,7 @@ const NoticeBox = ({title, createdAt, id}) => {
   return (
     <S.List>
       <Link
-        style={{ textDecoration: "none" }}
+        style={{ textDecoration: "none", width : "70%" }}
         to={{
           pathname: `/notice/${id}`,
           state : {id}
