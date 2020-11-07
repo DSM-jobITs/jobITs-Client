@@ -2,20 +2,21 @@ import React from "react";
 import * as S from "./style";
 import {Link} from "react-router-dom"
 
-const NoticeBox = () => {
+const NoticeBox = ({title, createdAt, id}) => {
   return (
     <S.List>
-      {/* <Link
-        style={{ textDecoration: "none" }}
+      <Link
+        style={{ textDecoration: "none", width : "70%" }}
         to={{
           pathname: `/notice/${id}`,
+          state : {id}
         }}
       >
-      </Link> */}
       <S.ListContent>
-      질질문질문질문질문질문질문질문질문질문질문질문질문질문질문문질질문질문질문질문질문질문문질문문질문
+      {title}
       </S.ListContent>
-      <S.ListDate>2020-10-24</S.ListDate>
+      </Link>
+      <S.ListDate>{createdAt}</S.ListDate>
     </S.List>
   );
 };

@@ -49,3 +49,14 @@ export const File = styled.p`
   margin-left:1.4rem;
   cursor: pointer;
 `
+
+export const Button = styled.button`
+  width: 7.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius:0.938rem;
+  background: #4B4B4B;
+  color: #fff;
+  font-weight:bold; 
+  cursor:pointer;
+`
