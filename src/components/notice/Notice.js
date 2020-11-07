@@ -8,15 +8,24 @@ import { baseUrl } from "../../constant/index"
 
 const Notice = () => {
   const [contents,setContents] = useState([]);
+  const [page, setPage] = useState(1);
   const config = {
     headers : {"Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
 };
   useEffect(()=>{
-    axios.get(baseUrl + "notice/1",config)
+    axios.get(baseUrl + "notice?page=" + page, config)
     .then(response => {
-      setContents(response.data.lists)
+      setContents(response.data.lists);
     });
-  },[])
+  },[page])
+
+  const onDeletePage = () => {
+    if(page > 1) setPage(state => state - 1);
+  }
+
+  const onAddPage = () => {
+    setPage(state => state + 1);
+  }
 
   return (
     <S.MainWarpper>
@@ -41,6 +50,7 @@ const Notice = () => {
                 title={list.title}
                 createdAt={list.createdAt}
                 key={list.id}
+                id={list.id}
               />
             );
           })}
@@ -50,11 +60,11 @@ const Notice = () => {
       </Link>
       </S.NoticeWarpper>
       <S.PageNum>
-        <S.Button>
+        <S.Button onClick={onDeletePage}>
           <img src="src/img/Left.png"/>
         </S.Button>
-        <S.P>{1}</S.P>
-        <S.Button>
+        <S.P>{page}</S.P>
+        <S.Button onClick={onAddPage}>
         <img src="src/img/Right.png"/>
         </S.Button>
       </S.PageNum>
