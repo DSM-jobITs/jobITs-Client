@@ -41,8 +41,8 @@ export const AddQuestion = styled.button`
 export const Delete = styled.button`
   width:  7.5rem;
   height: 2.5rem;
+  margin-left: 1rem;
   border: none;
-  margin-left:1.25rem;
   border-radius:0.938rem;
   background: #4B4B4B;
   color: #fff;
@@ -79,7 +79,29 @@ export const Question = styled.p`
 export const Img = styled.img`
   transition: all 0.3s ease-in-out;
   transform: ${prop => prop.isClick ? "rotate(180deg)":"rotate(0deg)"};
+`
 
+export const CheckBox = styled.input`
+&:checked + label{
+  color: #ffffff;
+  background: #c259ff;
+  font-weight:bold;
+}
+`
+
+export const Label = styled.label`
+  display: ${prop => prop.isDel ? "flex":"none"};
+  align-items:center;
+  justify-content:center;
+  min-width: 2rem;
+  height: 2rem;
+  border: none;
+  background: #ffffff;
+  border-radius:0.43rem;
+  margin-right: -1rem;
+  margin-left: 1rem; 
+  box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 `
 
 export const ExtendBox = styled.div`

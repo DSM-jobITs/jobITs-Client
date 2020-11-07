@@ -3,12 +3,13 @@ import * as S from "./style"
 import EmpItem from "./EmpItem"
 import axios from "axios"
 import "babel-polyfill"
-import {Link} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
 import { baseUrl } from "../../constant/index"
 
 const Employment = () => {
   const [contents, setContents] = useState([]);
-  
+  const [del,setDel] = useState(false);
+
 
   useEffect(()=>{ 
     axios.get(baseUrl + "employment",config)
@@ -18,6 +19,10 @@ const Employment = () => {
     });
   },[])
 
+  const handleDelete = () => {
+    del ? setDel(false) : setDel(true)
+  }
+
   return (
       <S.Warpper>
         <S.Header>
@@ -26,7 +31,9 @@ const Employment = () => {
             <Link to="/addEmployment">
               <S.AddQuestion>추가하기</S.AddQuestion>
             </Link>
-            <S.Delete>삭제하기</S.Delete>
+            <S.Delete onClick={handleDelete}>
+              {del ? "확인" : "삭제하기"}
+            </S.Delete>
           </div>
         </S.Header>
         {contents && contents.map(list => {
@@ -38,6 +45,7 @@ const Employment = () => {
                 answer={list.answer}
                 key={list.id}
                 id={list.id}
+                del={del}
               />  
             </S.Div>
           );
