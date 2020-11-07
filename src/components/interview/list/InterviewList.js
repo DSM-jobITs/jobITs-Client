@@ -6,20 +6,21 @@ import ListBox from "./listBox/ListBox";
 import * as S from "./style";
 import { baseUrl } from '../../../constant/index';
 
-const InterviewList = ({field}) => {
+const InterviewList = ({field,keyword}) => {
   const [contents,setContents] = useState([]);
   const [fields,setFields] = useState(field);
+  const [keywords, setKeywords] = useState(keyword)
   const [page,setPage]=useState(1);
+
   const config = {
     headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
   };
-  console.log(field);
   useEffect(()=>{
-    axios.get(baseUrl + "interview?page="+page+"&field="+field,config)
+    axios.get(baseUrl + "interview?page="+page+"&field="+field+"&keyword="+keyword,config)
     .then(response => {
       setContents(response.data.lists)
     });
-  },[field,page])
+  },[field,page,keyword])
 
   const onDeletePage = () => {
     if(page>1) setPage(state => state - 1);
