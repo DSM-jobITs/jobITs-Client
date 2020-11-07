@@ -56,7 +56,9 @@ const Notice = () => {
           })}
         </S.ListInner>
         <Link to="/addNotice">
-        <S.AddButton>질문 추가하기</S.AddButton>
+        <S.AddButton delete>삭제</S.AddButton>
+        <S.AddButton>공지 추가하기</S.AddButton>
+        
       </Link>
       </S.NoticeWarpper>
       <S.PageNum>
