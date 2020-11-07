@@ -41,7 +41,7 @@ export const AddQuestion = styled.button`
 export const Delete = styled.button`
   width:  7.5rem;
   height: 2.5rem;
-  margin-left: 1rem;
+  margin-left:1rem;
   border: none;
   border-radius:0.938rem;
   background: #4B4B4B;
@@ -82,6 +82,9 @@ export const Img = styled.img`
 `
 
 export const CheckBox = styled.input`
+/*   
+  color: ${prop => prop.click ? "#ffffff":" "};
+  background: ${prop => prop.click ? "#c259ff":" "}; */
 &:checked + label{
   color: #ffffff;
   background: #c259ff;
@@ -89,11 +92,11 @@ export const CheckBox = styled.input`
 }
 `
 
-export const Label = styled.label`
+export const Label = styled.button`
   display: ${prop => prop.isDel ? "flex":"none"};
   align-items:center;
   justify-content:center;
-  min-width: 2rem;
+  min-width: 3rem;
   height: 2rem;
   border: none;
   background: #ffffff;
@@ -110,6 +113,7 @@ export const ExtendBox = styled.div`
   min-height: 10rem;
   padding: 0 2.5rem;
   background: #f8ebff;
+  flex-direction:column;
 `
 
 export const Answer = styled.p`
@@ -117,4 +121,18 @@ export const Answer = styled.p`
   width: 100%;
   height: 88%;
 
+`
+
+export const Modify = styled.button`
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  width: 3rem;
+  height: 2rem;
+  border: none;
+  background: #ffffff;
+  border-radius:0.43rem;
+  box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-top:2rem;
 `

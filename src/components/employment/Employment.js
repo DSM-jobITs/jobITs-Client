@@ -3,13 +3,16 @@ import * as S from "./style"
 import EmpItem from "./EmpItem"
 import axios from "axios"
 import "babel-polyfill"
-import {Link, useHistory} from "react-router-dom"
+import {Link} from "react-router-dom"
 import { baseUrl } from "../../constant/index"
 
 const Employment = () => {
   const [contents, setContents] = useState([]);
   const [del,setDel] = useState(false);
 
+  const config = {
+    headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
+  };
 
   useEffect(()=>{ 
     axios.get(baseUrl + "employment",config)
@@ -20,7 +23,7 @@ const Employment = () => {
   },[])
 
   const handleDelete = () => {
-    del ? setDel(false) : setDel(true)
+    setDel(!del)
   }
 
   return (
@@ -32,12 +35,11 @@ const Employment = () => {
               <S.AddQuestion>추가하기</S.AddQuestion>
             </Link>
             <S.Delete onClick={handleDelete}>
-              {del ? "확인" : "삭제하기"}
+              {del ? "선택 글 삭제" : "삭제하기"}
             </S.Delete>
           </div>
         </S.Header>
         {contents && contents.map(list => {
-          console.log(list.id)
           return (
             <S.Div>
               <EmpItem 
