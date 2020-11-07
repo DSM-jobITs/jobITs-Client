@@ -1,25 +1,31 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import FieldItem from "./FieldItem"
 import * as S from "./style";
+import axios from "axios";
+import "babel-polyfill"
+import {baseUrl} from "../../../constant/index"
 
-const Field = () => {
+const Field = ({submitField}) => {
+  const [contents, setContents] = useState([]);
+  const [field, setField] = useState();
+  const fixField = (field) => {
+    setField(field);
+  }
 
-  const fieldList = [
-    '프론트엔드',
-    '백엔드',
-    '데이터베이스',
-    '보안',
-    '게임',
-    '안드로이드',
-    '공무원',
-    '부사관',
-    '가택경비원',
-    '가정부',
-    'a',
-    'b',
-    'c',
-    'd',
-    'e'
+  submitField(field);
+  const config = {
+    headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
+  };
+  // useEffect(()=>{
+  //   axios.get(baseUrl + "interview?page=1",config)
+  //   .then(response => {
+  //     setContents(response.data.field)
+  //   });
+  // },[])
+  const list = [
+    "front",
+    "back",
+    "zz"
   ]
   return (
     <S.MainWarpper>
@@ -30,9 +36,9 @@ const Field = () => {
         </S.LastText>
       </S.TextWarpper>
       <S.FieldForm action="">
-        {fieldList.map(field => {
+        {list.map(field => {
           return(
-            <FieldItem key={field} field={field}/>
+            <FieldItem fixField={fixField} key={field} fieldItem={field}/>
           )
         })}
       </S.FieldForm>

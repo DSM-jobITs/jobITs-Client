@@ -6,19 +6,28 @@ import ListBox from "./listBox/ListBox";
 import * as S from "./style";
 import { baseUrl } from '../../../constant/index';
 
-const InterviewList = () => {
+const InterviewList = ({field}) => {
   const [contents,setContents] = useState([]);
-  const [field,setField] = useState("");
-
-  const token = localStorage.getItem("accessToken");
-
+  const [fields,setFields] = useState(field);
+  const [page,setPage]=useState(1);
+  const config = {
+    headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
+  };
+  console.log(field);
   useEffect(()=>{
-    axios.get(baseUrl + "interview?page=1")
+    axios.get(baseUrl + "interview?page="+page+"&field="+fields,config)
     .then(response => {
       setContents(response.data.lists)
     });
-  },[])
+  },[field])
 
+  const onDeletePage = () => {
+    if(page>1) setPage(state => state - 1);
+  }
+
+  const onAddPage = () => {
+    setPage(state => state + 1);
+  }
   return ( 
     <S.MainWarpper>
       <S.ListWarppper>
@@ -41,11 +50,11 @@ const InterviewList = () => {
         </Link>
       </S.ListWarppper>
       <S.PageNum>
-        <S.Button>
+        <S.Button onClick={onDeletePage}>
           <img src="src/img/Left.png"/>
         </S.Button>
         <S.P>{1}</S.P>
-        <S.Button>
+        <S.Button onClick={onAddPage}>
         <img src="src/img/Right.png"/>
         </S.Button>
       </S.PageNum>
