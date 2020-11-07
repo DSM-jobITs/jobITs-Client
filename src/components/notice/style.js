@@ -79,14 +79,12 @@ export const NoticeHeader = styled.div`
 
 export const HeaderTitle = styled.p`
   font-weight: bold;
-  margin: 350px;
   color: #686868;
 `;
 
 export const HeaderDate = styled.p`
   font-weight: bold;
   color: #686868;
-  margin-right: 65px;
 `;
 
 export const AddButton = styled.button`
