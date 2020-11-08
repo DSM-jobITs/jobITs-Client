@@ -25,3 +25,12 @@ export const ListDate = styled.p`
   margin-left: 1.4rem;
   color: #707070;
 `;
+
+export const DeleteButton = styled.button`
+  margin-left : 10rem;
+  background-color : #C4A1C4;
+  color : white;
+  border-radius : 3px;
+  font-size : 0.5rem;
+  padding : 0.3rem 0.5rem;
+`;

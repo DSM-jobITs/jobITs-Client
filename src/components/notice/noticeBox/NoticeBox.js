@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./style";
+import * as N from "../style";
 import {Link} from "react-router-dom"
 
 const NoticeBox = ({title, createdAt, id}) => {
@@ -17,6 +18,7 @@ const NoticeBox = ({title, createdAt, id}) => {
       </S.ListContent>
       </Link>
       <S.ListDate>{createdAt}</S.ListDate>
+      <S.DeleteButton>삭제</S.DeleteButton>
     </S.List>
   );
 };
