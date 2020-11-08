@@ -39,10 +39,6 @@ const Notice = () => {
       <S.Header detail>
         <S.Title>공지사항</S.Title>
         <S.SearchBox>
-          <S.SearchForm>
-            <S.SearchInput></S.SearchInput>
-            <S.SearchIcon src="/src/img/Search.png"></S.SearchIcon>
-          </S.SearchForm>
         </S.SearchBox>
       </S.Header>
       <S.NoticeWarpper>
@@ -66,7 +62,7 @@ const Notice = () => {
           </N.ListContent>
         </S.ListInner>
         <Link to="/addNotice">
-        <S.AddButton delete>삭제</S.AddButton>
+        {/* <S.AddButton delete>삭제</S.AddButton> */}
         <S.AddButton>공지 추가하기</S.AddButton>
         
       </Link>
