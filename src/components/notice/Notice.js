@@ -36,7 +36,7 @@ const Notice = () => {
 
   return (
     <S.MainWarpper>
-      <S.Header>
+      <S.Header detail>
         <S.Title>공지사항</S.Title>
         <S.SearchBox>
           <S.SearchForm>
