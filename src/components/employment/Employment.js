@@ -32,10 +32,10 @@ const Employment = () => {
           <S.Title>취업 사전</S.Title>
           <div>
             <Link to="/addEmployment">
-              <S.AddQuestion>추가하기</S.AddQuestion>
+              <S.AddQuestion>질문  추가하기</S.AddQuestion>
             </Link>
             <S.Delete onClick={handleDelete}>
-              {del ? "선택 글 삭제" : "삭제하기"}
+              {del ? "취소" : "삭제"}
             </S.Delete>
           </div>
         </S.Header>

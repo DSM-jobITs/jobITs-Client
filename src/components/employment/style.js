@@ -33,13 +33,11 @@ export const AddQuestion = styled.button`
   margin-left:-1.25rem;
   border: none;
   border-radius:0.938rem;
-  background: #4B4B4B;
-  color: #fff;
-  font-weight:bold; 
+  background: #e0d5e0; 
 `
 
 export const Delete = styled.button`
-  width:  7.5rem;
+  min-width:  5.5rem;
   height: 2.5rem;
   margin-left:1rem;
   border: none;
