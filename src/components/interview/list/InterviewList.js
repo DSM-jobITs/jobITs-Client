@@ -8,8 +8,8 @@ import { baseUrl } from '../../../constant/index';
 
 const InterviewList = ({field,keyword}) => {
   const [contents,setContents] = useState([]);
-  const [fields,setFields] = useState(field);
-  const [keywords, setKeywords] = useState(keyword)
+  // const [fields,setFields] = useState(field);
+  // const [keywords,setKeywords] = useState();
   const [page,setPage]=useState(1);
 
   const config = {
