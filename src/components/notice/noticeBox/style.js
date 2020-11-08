@@ -9,10 +9,10 @@ export const List = styled.div`
 
 export const ListContent = styled.p`
   display: flex;
-  margin: 0;
+  margin: ${props => props.err ? '2rem 0 0 0' : '0'};
   align-items: center;
   color: #707070;
-
+  justify-content : ${props => props.err ? 'center' : ''};
   &:hover {
     color : #444444;
     transition : 0.2s;
