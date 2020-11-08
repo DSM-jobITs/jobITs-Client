@@ -2,7 +2,8 @@ import axios from 'axios';
 import React,{useState} from 'react';
 import * as S from "./style";
 import {baseUrl} from "../../constant/index"
-import {useHistory} from "react-router-dom"
+import {useHistory, Switch, Route} from "react-router-dom"
+import AddEmployment from './addEmployment/AddEmployment';
 
 const EmpItem = ({question, answer, id, del}) => {
   const [isClick,setIsClick] = useState(false);
