@@ -6,7 +6,6 @@ import "babel-polyfill"
 import { list} from "../../../constant/index"
 
 const Field = ({submitField}) => {
-
   const [field, setField] = useState();
   const fixField = (field) => {
     setField(field);

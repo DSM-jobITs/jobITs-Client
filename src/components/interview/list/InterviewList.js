@@ -8,18 +8,28 @@ import { baseUrl } from '../../../constant/index';
 
 const InterviewList = ({field,keyword}) => {
   const [contents,setContents] = useState([]);
+  const [questLength,setQuestLength] = useState();
   // const [fields,setFields] = useState(field);
   // const [keywords,setKeywords] = useState();
   const [page,setPage]=useState(1);
-
   const config = {
     headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
   };
+
+  field = field ? field : "\'\'";
   useEffect(()=>{
     axios.get(baseUrl + "interview?page="+page+"&field="+field+"&keyword="+keyword,config)
     .then(response => {
       setContents(response.data.lists)
-    });
+      setQuestLength(response.data.numOfQuestions);
+    })
+    .catch(err => {
+      if(err.response){
+        console.log(err.response.status);
+        console.log(err.response.data);
+        console.log(err.response.headers);
+      }
+    })
   },[field,page,keyword])
 
   const onDeletePage = () => {
@@ -32,7 +42,7 @@ const InterviewList = ({field,keyword}) => {
   return ( 
     <S.MainWarpper>
       <S.ListWarppper>
-        <S.FilterText>{field ? field : "분야 무관"} ({contents ? contents.length : 0})</S.FilterText>
+        <S.FilterText>{field!="\'\'" ? field : "전체"} ({questLength})</S.FilterText>
         <S.ListHeader>
           <S.HeaderTitle>면접</S.HeaderTitle>
           <S.HeaderDate>등록일</S.HeaderDate>
