@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import * as S from "./addNotice/style";
 import * as N from "./detailStyle";
 import { Link, useHistory } from "react-router-dom";
@@ -9,12 +9,18 @@ const NoticeItem = ({location, id}) => {
   const [list, setList] = useState({});
   const [files, setFiles] = useState([]);
   let history = useHistory();
+
+  const onContent = (data) => {
+    document.getElementById("contentBox").innerHTML = data;
+  }
+
   useEffect(() => {
     axios.get(baseUrl + "notice/" + location.state.id)
     .then((res) => {
       console.log(res);
       setList(res.data);
       setFiles(res.data.files);
+      onContent(res.data.content);
     })
     .catch((err) => {
       console.log(err);
@@ -38,7 +44,7 @@ const NoticeItem = ({location, id}) => {
         <N.Date>{list.createdAt}</N.Date>
       </N.TitleBox>
       <N.Viewer>
-        <p>{list.content}</p>
+        <div id="contentBox"></div>
       </N.Viewer>
       <N.FileBox>
         <N.P>첨부파일</N.P>
