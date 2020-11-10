@@ -13,7 +13,7 @@ export const Warpper = styled.div`
 export const Header = styled.div`
   margin-top: 4.375rem;
   display: flex;
-  width: 55%;
+  width: 54%;
   height: 6.25rem;
   justify-content:space-between;
   align-items:center;
@@ -42,7 +42,7 @@ export const Delete = styled.button`
   margin-left:1rem;
   border: none;
   border-radius:0.938rem;
-  background: #C4A1C4;
+  background: #d6a7e8;
 `
 
 export const Div = styled.div`
@@ -58,7 +58,7 @@ export const Box = styled.div`
   width: 100%;
   height: 5rem;
   align-items:center;
-  background: #F7DCFF;
+  background: #f5d4ff;
   padding: 0 2.5rem;
   cursor: pointer;
   justify-content:space-between
