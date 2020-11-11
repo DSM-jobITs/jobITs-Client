@@ -17,10 +17,10 @@ const NoticeBox = ({title, createdAt, id}) => {
   const onDeleteNotice = () => {
     axios.delete(baseUrl + "notice/" + id, config)
     .then((res) => {
-      console.log(res);
+      alert("해당 공지가 삭제되었습니다.");
       setTimeout(() => {
         window.location.reload();
-      }, 500);
+      }, 300);
     })
     .catch((err) => {
       console.log(err);
