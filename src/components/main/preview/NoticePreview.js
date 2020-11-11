@@ -4,6 +4,7 @@ import * as S from "./style";
 import axios from "axios"
 import "babel-polyfill"
 import {baseUrl, config} from "../../../constant/index"
+import { Link } from "react-router-dom";
 
 const NoticePreview = () => {
   const [contents,setContents] = useState([]);
@@ -20,9 +21,9 @@ const NoticePreview = () => {
       <S.PreviewWrapper>
         <S.TopInner>
           <S.PreviewLabel>공지</S.PreviewLabel>
-          <S.NoticeButton>
+          <Link to="/notice"><S.NoticeButton>
             <img src="/src/img/Plus.png" />
-          </S.NoticeButton>
+          </S.NoticeButton></Link>
         </S.TopInner>
         <S.NoticeHeader>
           <S.HeaderInner>제목</S.HeaderInner>
