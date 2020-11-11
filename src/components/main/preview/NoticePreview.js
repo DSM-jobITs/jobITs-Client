@@ -32,6 +32,7 @@ const NoticePreview = () => {
           return(
             <NoticeList
               key={list.id}
+              id={list.id}
               title={list.title}
               createdAt={list.createdAt}
             />

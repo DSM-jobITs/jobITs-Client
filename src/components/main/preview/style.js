@@ -12,7 +12,7 @@ export const MainWrapper = styled.div`
 
 export const PreviewWrapper = styled.div`
   width: 68.75rem;
-  height: 15.625rem;
+  height: 14rem;
   background: #fff;
 `;
 
