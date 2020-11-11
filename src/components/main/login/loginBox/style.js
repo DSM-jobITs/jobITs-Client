@@ -4,23 +4,28 @@ export const MainWrapper = styled.div`
   width: 600px;
   height: 700px;
   background-color: rgba(0, 0, 0, 0);
-  right: 1;
-  border-radius: 40px;
-  margin-left: 500px;
-  margin-top: 150px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
+export const Img = styled.img`
+  width: 40rem;
+  margin-right: 6rem;
+`
+
+export const WelcomeWarpper = styled.div`
+  width: 30rem;
+  display: flex;
+`
+
 export const LoginName = styled.p`
-  display: lnline-block;
+  display: flex;
   font-size: 2rem;
   font-weight: bold;
+  text-align:center;
   text-shadow: 1px 3px 2px #ac48ff;
   color: #ffffff;
-  margin: 0;
   margin-bottom: 10px;
 `;
 

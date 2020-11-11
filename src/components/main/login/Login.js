@@ -4,7 +4,6 @@ import MainBox from "./MainBox/MainBox";
 import * as S from "./style";
 
 const Login = ({isLogin, setIsLogin}) => {
-  {console.log(isLogin)}
   return (
     <S.ContentWarp>
     {isLogin ?
