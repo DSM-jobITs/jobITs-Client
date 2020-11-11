@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const TitleBox = styled.div`
-  width:65%;
+  width:60%;
   height: 7rem;
   background:#ededed;
 `
@@ -28,7 +28,7 @@ export const Viewer = styled.div`
 export const FileBox = styled.div`
   display:flex;
   align-items:center;
-  width:65%; 
+  width:60%; 
   height:4.2rem;
   border-top:solid 2px #707070;
   border-bottom:solid 2px #707070; 
