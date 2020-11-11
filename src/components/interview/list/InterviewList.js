@@ -50,7 +50,7 @@ const InterviewList = ({field,keyword}) => {
           <S.HeaderDate>등록일</S.HeaderDate>
         </S.ListHeader>
         <S.ListInner>
-        {errText ? errText : contents && contents.map(list => {
+        {errText ? <S.ErrorMessage>{errText}</S.ErrorMessage> : contents && contents.map(list => {
           return (
             <ListBox content={list.content}
             createdAt={list.createdAt}

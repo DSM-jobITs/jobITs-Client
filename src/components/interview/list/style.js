@@ -49,6 +49,17 @@ export const ListInner = styled.div`
   height: 520px;
 `;
 
+export const ErrorMessage = styled.div`
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  width: 30rem;
+  height: 20rem;
+  font-size:2rem;
+  margin: 0 auto;
+  color: #bababa;
+`
+
 export const AddButton = styled.button`
   position: relative;
   width: 150px;
