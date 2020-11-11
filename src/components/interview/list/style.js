@@ -62,14 +62,15 @@ export const ErrorMessage = styled.div`
 
 export const AddButton = styled.button`
   position: relative;
-  width: 150px;
-  height: 45px;
+  /* width: 9.375rem; */
+  width: ${props => props.isAdd ? "9.375rem":"5.5rem"};
+  height: 2.8125rem;
   float: right;
   margin-right: 65px;
   margin-top: -1 0px;
-  background: #e0d5e0;
+  background: ${props => props.isAdd ? "#e0d5e0":"#d6a7e8"};
   box-shadow: 1px 3px 5px -1px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   border: none;
 `;
 

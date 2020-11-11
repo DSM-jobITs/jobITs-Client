@@ -11,7 +11,7 @@ const InterviewList = ({field,keyword}) => {
   const [questLength,setQuestLength] = useState();
   const [page,setPage]=useState(1);
   const [errText,setErrText] = useState(null);
-
+  const [del,setDel] = useState(false);
   const config = {
     headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
   };
@@ -41,6 +41,10 @@ const InterviewList = ({field,keyword}) => {
   const onAddPage = () => {
     if(errText == null) setPage(state => state + 1);
   }
+
+  const handleDelete = () => {
+    setDel(!del)
+  }
   return ( 
     <S.MainWarpper>
       <S.ListWarppper>
@@ -54,12 +58,16 @@ const InterviewList = ({field,keyword}) => {
           return (
             <ListBox content={list.content}
             createdAt={list.createdAt}
-            key={list.id} />
+            key={list.id}
+            id={list.id}
+            del={del}
+            />
           );
         })}
         </S.ListInner>
+        <S.AddButton isAdd={false} onClick={handleDelete}>{del?"취소":"삭제"}</S.AddButton>
         <Link to="/addInterview">
-          <S.AddButton>질문 추가하기</S.AddButton>
+          <S.AddButton isAdd={true}>질문 추가하기</S.AddButton>
         </Link>
       </S.ListWarppper>
       <S.PageNum>
