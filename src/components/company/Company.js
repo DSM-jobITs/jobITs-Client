@@ -3,6 +3,7 @@ import * as S from "../employment/style";
 import * as C from "./style";
 import CompanyItem from "./CompanyItem";
 import axios from "axios";
+import { baseUrl } from "../../constant";
 
 const Company = () => {
   const [list, setList] = useState([]);
@@ -15,7 +16,7 @@ const Company = () => {
 
   useEffect(() => {
     axios
-      .get("baseUrl/company?page=" + 1, config)
+      .get(baseUrl + "company?page=" + 1, config)
       .then((res) => {
         console.log(res);
         setList(res.data.lists);

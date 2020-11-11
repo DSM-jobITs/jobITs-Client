@@ -6,6 +6,7 @@ export const MainWrapper = styled.div`
   height: 480px;
   justify-content: space-around;
   align-items: center;
+  margin-top : 3rem;
 `;
 
 export const IntroImg = styled.img`
