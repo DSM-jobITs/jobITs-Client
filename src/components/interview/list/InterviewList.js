@@ -21,7 +21,7 @@ const InterviewList = ({field,keyword}) => {
     axios.get(baseUrl + "interview?page="+page+"&field="+field+"&keyword="+keyword,config)
     .then(response => {
       setContents(response.data.lists)
-      setQuestLength(response.data.numOfQuestions);
+      setQuestLength(response.data.numOfQuestion);
       setErrText(null);
     })
     .catch(err => {

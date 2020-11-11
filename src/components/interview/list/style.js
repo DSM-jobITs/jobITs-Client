@@ -30,6 +30,8 @@ export const ListHeader = styled.div`
   padding: 5px 0px;
   align-items: center;
   background: #e4c7ff;
+  border-top-left-radius:0.7rem;
+  border-top-right-radius:0.7rem;
 `;
 
 export const HeaderTitle = styled.p`
@@ -46,7 +48,9 @@ export const HeaderDate = styled.p`
 
 export const ListInner = styled.div`
   width: 100%;
-  height: 520px;
+  height: 30.375rem;
+  background:#fbf7ff;
+  margin-bottom:2rem;
 `;
 
 export const ErrorMessage = styled.div`
