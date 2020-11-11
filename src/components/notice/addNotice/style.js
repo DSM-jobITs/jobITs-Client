@@ -66,3 +66,8 @@ export const InputWarpper = styled.div`
 export const buttonContainer = styled.div`
   width : 67.38rem;
 `;
+
+export const CheckContainer = styled.div`
+  display : flex;
+  align-items : center;
+`;
