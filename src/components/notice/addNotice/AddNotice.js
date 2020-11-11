@@ -45,12 +45,10 @@ const AddNotice = () => {
     
     axios.post(baseUrl + "notice", form, config)
     .then(() => {
-      setTimeout(() => {
+      alert("공지 작성이 완료되었습니다.");
         history.push({
           pathname: "/notice",
         });
-      }, 400);
-      
     })
     .catch(err => {
       console.log(err);
