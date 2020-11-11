@@ -9,9 +9,9 @@ import { baseUrl } from '../../../constant/index';
 const InterviewList = ({field,keyword}) => {
   const [contents,setContents] = useState([]);
   const [questLength,setQuestLength] = useState();
-  // const [fields,setFields] = useState(field);
-  // const [keywords,setKeywords] = useState();
   const [page,setPage]=useState(1);
+  const [errText,setErrText] = useState(null);
+
   const config = {
     headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
   };
@@ -22,22 +22,24 @@ const InterviewList = ({field,keyword}) => {
     .then(response => {
       setContents(response.data.lists)
       setQuestLength(response.data.numOfQuestions);
+      setErrText(null);
     })
     .catch(err => {
-      if(err.response){
-        console.log(err.response.status);
-        console.log(err.response.data);
-        console.log(err.response.headers);
-      }
+      setErrText("마지막 페이지 입니다.")
     })
   },[field,page,keyword])
+
+  //field 변경 시 1페이지로 초기화
+  useEffect(()=>{
+    setPage(1);
+  },[field])
 
   const onDeletePage = () => {
     if(page>1) setPage(state => state - 1);
   }
 
   const onAddPage = () => {
-    setPage(state => state + 1);
+    if(errText == null) setPage(state => state + 1);
   }
   return ( 
     <S.MainWarpper>
@@ -48,7 +50,7 @@ const InterviewList = ({field,keyword}) => {
           <S.HeaderDate>등록일</S.HeaderDate>
         </S.ListHeader>
         <S.ListInner>
-        {contents && contents.map(list => {
+        {errText ? errText : contents && contents.map(list => {
           return (
             <ListBox content={list.content}
             createdAt={list.createdAt}
