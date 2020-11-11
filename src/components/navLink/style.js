@@ -10,6 +10,7 @@ export const NavWarp = styled.div`
   box-shadow: 0px 3px 6px -1px #a1a1a1;
   background: #fff;
   align-items: center;
+  z-index:1;
 `;
 
 export const Logo = styled.img`

@@ -1,21 +1,47 @@
 import React from "react";
 import * as S from "./style";
-import {Link} from "react-router-dom"
+import * as N from "../style";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { baseUrl } from "../../../constant";
 
-const NoticeBox = () => {
+const NoticeBox = ({title, createdAt, id}) => {
+
+  const config = {
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk",
+    },
+  };
+
+  const onDeleteNotice = () => {
+    axios.delete(baseUrl + "notice/" + id, config)
+    .then((res) => {
+      console.log(res);
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+
   return (
     <S.List>
-      {/* <Link
-        style={{ textDecoration: "none" }}
+      <Link
+        style={{ textDecoration: "none", width : "70%" }}
         to={{
           pathname: `/notice/${id}`,
+          state : {id}
         }}
       >
-      </Link> */}
       <S.ListContent>
-      질질문질문질문질문질문질문질문질문질문질문질문질문질문질문문질질문질문질문질문질문질문문질문문질문
+      {title}
       </S.ListContent>
-      <S.ListDate>2020-10-24</S.ListDate>
+      </Link>
+      <S.ListDate>{createdAt}</S.ListDate>
+      <S.DeleteButton onClick={onDeleteNotice}>삭제</S.DeleteButton>
     </S.List>
   );
 };
