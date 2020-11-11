@@ -3,9 +3,11 @@ import * as S from "./style";
 import axios from "axios";
 import "babel-polyfill";
 import { baseUrl } from "../../constant/index";
+import { useHistory } from "react-router-dom";
 
 const Password = () => {
-	const onPasswordReset = () => {
+	const onPasswordReset = (e) => {
+    e.preventDefault();
     const newPassword = document.getElementsByName("newPassword").value;
     const checkPassword = document.getElementsByName("checkPassword").value;
     const data = {
@@ -19,12 +21,16 @@ const Password = () => {
           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk",
       },
     };
+    let history = useHistory();
 
     if(newPassword == checkPassword)
     {
       axios.put(baseUrl + "login/password", data, config)
       .then(res => {
         console.log(res);
+        history.push({
+          pathname: "/",
+        });
       })
       .catch(err => {
         console.log(err);
