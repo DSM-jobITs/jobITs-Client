@@ -11,7 +11,7 @@ const Password = () => {
     const data = {
       "oldPassword" : document.getElementsByName("currentPassword").value,
       "newPassword" : newPassword
-    }
+    };
 
     const config = {
       headers: {
