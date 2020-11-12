@@ -12,8 +12,11 @@ const Notice = () => {
   const [page, setPage] = useState(1);
   const [errText, setErrText] = useState(null);
   const config = {
-    headers : {"Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
-};
+		headers: {
+			Authorization:
+				"Bearer " + localStorage.getItem("token"),
+		},
+	};
   useEffect(()=>{
     axios.get(baseUrl + "notice?page=" + page, config)
     .then(response => {
@@ -54,6 +57,7 @@ const Notice = () => {
                 createdAt={list.createdAt}
                 key={list.id}
                 id={list.id}
+                isAdmin={list.isAdmin}
               />
             );
           })}
@@ -62,10 +66,8 @@ const Notice = () => {
           </N.ListContent>
         </S.ListInner>
         <Link to="/addNotice">
-        {/* <S.AddButton delete>삭제</S.AddButton> */}
-        <S.AddButton>공지 추가하기</S.AddButton>
-        
-      </Link>
+          <S.AddButton>공지 추가하기</S.AddButton>
+        </Link>
       </S.NoticeWarpper>
       <S.PageNum>
         <S.Button onClick={onDeletePage}>
