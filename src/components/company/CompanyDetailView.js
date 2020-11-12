@@ -3,6 +3,7 @@ import * as S from "../employment/style";
 import * as C from "./style";
 import CompanyPasser from "./CompanyPasser";
 import axios from "axios";
+import { baseUrl } from "../../constant";
 
 const CompanyDetailView = ({ id, location }) => {
   const [company, setCompany] = useState({});
@@ -17,7 +18,7 @@ const CompanyDetailView = ({ id, location }) => {
 
   useEffect(() => {
     axios
-      .get("baseUrl/company/" + location.state.id, config)
+      .get(baseUrl + "company/" + location.state.id, config)
       .then((res) => {
         console.log(res);
         console.log("hi");

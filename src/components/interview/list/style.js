@@ -30,6 +30,8 @@ export const ListHeader = styled.div`
   padding: 5px 0px;
   align-items: center;
   background: #e4c7ff;
+  border-top-left-radius:0.7rem;
+  border-top-right-radius:0.7rem;
 `;
 
 export const HeaderTitle = styled.p`
@@ -46,19 +48,33 @@ export const HeaderDate = styled.p`
 
 export const ListInner = styled.div`
   width: 100%;
-  height: 520px;
+  height: 30.375rem;
+  background:#fbf7ff;
+  margin-bottom:2rem;
 `;
+
+export const ErrorMessage = styled.div`
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  width: 30rem;
+  height: 20rem;
+  font-size:2rem;
+  margin: 0 auto;
+  color: #bababa;
+`
 
 export const AddButton = styled.button`
   position: relative;
-  width: 150px;
-  height: 45px;
+  /* width: 9.375rem; */
+  width: ${props => props.isAdd ? "9.375rem":"5.5rem"};
+  height: 2.8125rem;
   float: right;
   margin-right: 65px;
   margin-top: -1 0px;
-  background: #e0d5e0;
+  background: ${props => props.isAdd ? "#e0d5e0":"#d6a7e8"};
   box-shadow: 1px 3px 5px -1px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   border: none;
 `;
 
