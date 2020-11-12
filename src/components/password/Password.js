@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
 import axios from "axios";
-// import "babel-polyfill";
+import "babel-polyfill";
 import { baseUrl } from "../../constant/index";
 import { useHistory } from "react-router-dom";
 
@@ -34,7 +34,7 @@ const Password = () => {
     const config = {
       headers: {
         Authorization:
-          "Bearer" + localStorage.getItem("token")
+          "Bearer " + localStorage.getItem("token")
       },
     };
 
