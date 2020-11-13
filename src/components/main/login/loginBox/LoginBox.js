@@ -19,7 +19,6 @@ const LoginBox = ({setIsLogin}) => {
     }
     axios.post(baseUrl+"login",data)
     .then((res) => {
-      localStorage.token = res.data.accessToken;
       localStorage.setItem('token',res.data.accessToken);
       alert("로그인에 성공하였습니다.")
       setIsLogin(true);

@@ -5,7 +5,6 @@ import IntroContainer from "./main/intro/IntroContainer";
 import FooterContainer from "./main/footer/FooterContainer";
 
 const MainContainer = ({isLogin,setIsLogin}) => {
-  {console.log(isLogin)}
   return (
     <Fragment>
       <LoginContainer isLogin={isLogin} setIsLogin={setIsLogin}/>
