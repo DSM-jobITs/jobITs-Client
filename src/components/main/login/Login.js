@@ -4,11 +4,10 @@ import MainBox from "./MainBox/MainBox";
 import * as S from "./style";
 
 const Login = ({isLogin, setIsLogin}) => {
-
-  const login = localStorage.getItem("token");
+  {console.log(isLogin)}
   return (
     <S.ContentWarp>
-    {login ?
+    {isLogin ?
       <MainBox /> : <LoginBox setIsLogin={setIsLogin} /> }
     </S.ContentWarp>
   );

@@ -14,12 +14,12 @@ import CompanyDetailView from "../company/CompanyDetailView";
 import NoticeDetailView from "../notice/NoticeDetailView";
 import Logout from "./Logout"
 
-
 const Header = () => {
   const [isLogin,setIsLogin] = useState(false);
   const activeStyle = {
     color: 'black'
   }
+  {console.log(isLogin)}
 
   return (
     <>
