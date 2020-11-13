@@ -8,6 +8,7 @@ export const NoticeInner = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  text-decoration:none;
 `;
 
 export const NoticeList = styled.li`
@@ -17,6 +18,7 @@ export const NoticeList = styled.li`
   font-size: 1.2rem;
   margin: 0 15px;
   color: #878787;
+
 `;
 
 export const NoticeDate = styled.p`

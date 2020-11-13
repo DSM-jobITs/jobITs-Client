@@ -14,7 +14,7 @@ export const Warpper = styled.div`
   min-height: 100vh;
   background:#F6F6F6;
   flex-direction:column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items:center;
 `
 
@@ -23,15 +23,14 @@ export const Header = styled.div`
   display: flex;
   width: 60%;
   height: 100px;
-  align-items:center;
+  align-items: center;
+  justify-content: ${props => props.detail ? 'space-between' : ''};
 `
 
 export const Title = styled.p`
   width: 300px;
   font-size:2rem;
   font-weight: bold;
-  text-align:center;
-  margin-left:-80px;
 `
 
 export const SubmitBtn = styled.button`
@@ -42,12 +41,33 @@ export const SubmitBtn = styled.button`
   background: #4B4B4B;
   color: #fff;
   font-weight:bold; 
+  float : right;
 `
+
+export const TitleInput = styled.input`
+  width : 65.58rem;
+  padding : 0.6rem 0.8rem;
+  border : 1px solid #ccc;
+  font-size : 1.2rem;
+  margin-bottom : 1rem;
+  ::placeholder {
+    color : rgba(34,47,62,.7);
+  }
+`;
 
 export const InputWarpper = styled.div`
   display: flex;
   flex-direction:column;
   align-items:flex-start;
-  width: 70%;
+  width: 60%;
   min-height: 240px;
 `
+
+export const buttonContainer = styled.div`
+  width : 67.38rem;
+`;
+
+export const CheckContainer = styled.div`
+  display : flex;
+  align-items : center;
+`;

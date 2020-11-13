@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Field from "./field/Field"
-import List from "./list/InterviewList"
+import InterviewList from "./list/InterviewList"
 import Search from "./search/Search"
 
 const InterviewContainer = () => {
+  const [field,setField] = useState();
+  const [keyword,setKeyword] = useState();
+
+  const submitField = (field) => {
+    setField(field)
+  }
+
+  const submitKeyword = (keyword) => {
+    setKeyword(keyword)
+  }
   return (
-    <div>
-      <Field />
-      <Search />
-      <List />
-    </div>
+    <>
+      <Field submitField={submitField}/>
+      <Search submitKeyword={submitKeyword}/>
+      <InterviewList field={field} keyword={keyword}/>
+    </>
   );
 };
 
