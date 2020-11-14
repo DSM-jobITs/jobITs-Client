@@ -31,8 +31,8 @@ const EmpItem = ({question, answer, id, del}) => {
 
   return (
     <>
-      <S.Box>
-        <S.Question onClick={handleClick}>{question}</S.Question>
+      <S.Box  onClick={handleClick}>
+        <S.Question>{question}</S.Question>
         <S.Img src="/src/img/Dropdown.png" isClick={isClick}/>
         <S.Label isDel={del} onClick={onPostDelete}>삭제</S.Label>
         {/* <S.CheckBox onClick={onCheckPost} click={isPostCheck} name="del" type="checkbox" id={id}/> */}
