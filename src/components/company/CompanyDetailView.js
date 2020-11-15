@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import * as S from "../employment/style";
 import * as C from "./style";
 import CompanyPasser from "./CompanyPasser";
+import { baseUrl } from "../../constant/index";
 import axios from "axios";
-import { baseUrl } from "../../constant";
 
 const CompanyDetailView = ({ id, location }) => {
   const [company, setCompany] = useState({});

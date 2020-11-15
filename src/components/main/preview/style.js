@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const MainWrapper = styled.div`
   width: 100%;
-  height: 30rem;
+  height: 25rem;
+  overflow: hidden;
   background: #fff;
   display: flex;
   justify-content: center;
@@ -11,7 +12,7 @@ export const MainWrapper = styled.div`
 
 export const PreviewWrapper = styled.div`
   width: 68.75rem;
-  height: 14rem;
+  height: 15.625rem;
   background: #fff;
 `;
 

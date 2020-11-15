@@ -8,50 +8,29 @@ import { baseUrl } from "../../constant/index"
 
 const Employment = () => {
   const [contents, setContents] = useState([]);
-  const [del,setDel] = useState(false);
 
-  const config = {
-    headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
-  };
-
-  useEffect(()=>{ 
-    axios.get(baseUrl + "employment",config)
+  useEffect(()=>{
+    axios.get(baseUrl + "employment/1")
     .then(response => {
       setContents(response.data.lists)
-      console.log(localStorage.getItem("token"));
     });
   },[])
-
-  const handleDelete = () => {
-    setDel(!del)
-  }
-
   return (
       <S.Warpper>
         <S.Header>
           <S.Title>취업 사전</S.Title>
-          <div>
-            <Link to="/addEmployment">
-              <S.AddQuestion>질문  추가하기</S.AddQuestion>
-            </Link>
-            <S.Delete onClick={handleDelete}>
-              {del ? "취소" : "삭제"}
-            </S.Delete>
-          </div>
+          <Link to="/addEmployment">
+            <S.AddQuestion>추가하기</S.AddQuestion>
+          </Link>
         </S.Header>
-        {contents && contents.map(list => {
+        {/* {contents && contents.map(list => {
           return (
-            <S.Div>
-              <EmpItem 
-                question={list.question}
-                answer={list.answer}
-                key={list.id}
-                id={list.id}
-                del={del}
-              />  
-            </S.Div>
+            <EmpItem question={list.qestion}
+            answer={list.answer}
+            key={list.id} />
           );
-        })}
+        })} */}
+        <EmpItem question="이것은 질문입니다" answer="이건 답변이구연"/>
       </S.Warpper>
   );
 };

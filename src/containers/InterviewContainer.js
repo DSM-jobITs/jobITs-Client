@@ -6,9 +6,9 @@ import Search from "../components/interview/search/Search"
 const InterviewContainer = () => {
   return (
     <Fragment>
-      <Field submitField={submitField}/>
+      <Field />
       <Search />
-      <List field={submitField} />
+      <List />
     </Fragment>
   );
 };
