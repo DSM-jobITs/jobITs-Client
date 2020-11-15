@@ -1,4 +1,4 @@
-export const baseUrl = "http://13.125.175.100:3000/";
+export const baseUrl = "http://13.209.17.101:3000/";
 
 export const list = [
   "front",
