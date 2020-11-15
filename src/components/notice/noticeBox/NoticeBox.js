@@ -37,7 +37,7 @@ const NoticeBox = ({title, createdAt, id, isAdmin}) => {
         }}
       >
       <S.ListContent>
-      {title}
+        <N.Number>No.{id}</N.Number>{title}
       </S.ListContent>
       </Link>
       <S.ListDate>{createdAt}</S.ListDate>
