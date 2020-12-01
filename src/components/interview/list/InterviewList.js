@@ -6,76 +6,46 @@ import ListBox from "./listBox/ListBox";
 import * as S from "./style";
 import { baseUrl } from '../../../constant/index';
 
-const InterviewList = ({field,keyword}) => {
+const InterviewList = () => {
   const [contents,setContents] = useState([]);
-  const [questLength,setQuestLength] = useState();
-  const [page,setPage]=useState(1);
-  const [errText,setErrText] = useState(null);
-  const [del,setDel] = useState(false);
-  const config = {
-    headers : { "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk"}
-  };
+  const [field,setField] = useState("");
 
-  field = field ? field : "\'\'";
+  const token = localStorage.getItem("accessToken");
+
   useEffect(()=>{
-    axios.get(baseUrl + "interview?page="+page+"&field="+field+"&keyword="+keyword,config)
+    axios.get(baseUrl + "interview?page=1")
     .then(response => {
       setContents(response.data.lists)
-      setQuestLength(response.data.numOfQuestion);
-      setErrText(null);
-    })
-    .catch(err => {
-      setErrText("마지막 페이지 입니다.")
-    })
-  },[field,page,keyword])
+    });
+  },[])
 
-  //field 변경 시 1페이지로 초기화
-  useEffect(()=>{
-    setPage(1);
-  },[field])
-
-  const onDeletePage = () => {
-    if(page>1) setPage(state => state - 1);
-  }
-
-  const onAddPage = () => {
-    if(errText == null) setPage(state => state + 1);
-  }
-
-  const handleDelete = () => {
-    setDel(!del)
-  }
   return ( 
     <S.MainWarpper>
       <S.ListWarppper>
-        <S.FilterText>{field!="\'\'" ? field : "전체"} ({questLength})</S.FilterText>
+        <S.FilterText>분야 무관 ({contents ? contents.length : 0})</S.FilterText>
         <S.ListHeader>
           <S.HeaderTitle>면접</S.HeaderTitle>
           <S.HeaderDate>등록일</S.HeaderDate>
         </S.ListHeader>
         <S.ListInner>
-        {errText ? <S.ErrorMessage>{errText}</S.ErrorMessage> : contents && contents.map(list => {
+        {contents && contents.map(list => {
           return (
             <ListBox content={list.content}
             createdAt={list.createdAt}
-            key={list.id}
-            id={list.id}
-            del={del}
-            />
+            key={list.id} />
           );
         })}
         </S.ListInner>
-        <S.AddButton isAdd={false} onClick={handleDelete}>{del?"취소":"삭제"}</S.AddButton>
         <Link to="/addInterview">
-          <S.AddButton isAdd={true}>질문 추가하기</S.AddButton>
+          <S.AddButton>질문 추가하기</S.AddButton>
         </Link>
       </S.ListWarppper>
       <S.PageNum>
-        <S.Button onClick={onDeletePage}>
+        <S.Button>
           <img src="src/img/Left.png"/>
         </S.Button>
-        <S.P>{page}</S.P>
-        <S.Button onClick={onAddPage}>
+        <S.P>{1}</S.P>
+        <S.Button>
         <img src="src/img/Right.png"/>
         </S.Button>
       </S.PageNum>

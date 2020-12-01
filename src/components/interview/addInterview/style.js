@@ -47,24 +47,21 @@ export const SubmitBtn = styled.button`
 
 export const FieldSelect = styled.div`
   display: flex;
-  margin-left: 25rem;
+  margin-left: 300px;
   justify-content:center;
   align-items:center;
-  width: 6rem;
-  height: 2rem;
-  background: #949494;
+  width: 100px;
+  height: 40px;
+  background: #707070;
+  border-radius:10px;
   color: #fff;
   font-size:14px;
-  font-weight:bold;
-  border-top-left-radius:0.44rem;
-  border-bottom-left-radius:0.44rem;
 `
 
 export const SelectDrop = styled.select`
   width: 150px;
   height: 30px;
-  border-top-right-radius:0.44rem;
-  border-bottom-right-radius:0.44rem;
+  margin-left: 20px;
 `
 
 export const InputWarpper = styled.div`
@@ -81,51 +78,4 @@ export const AddInputBtn = styled.button`
   margin-top: 20px;
   border-radius: 10px;
   background: #EBEBEB;
-`
-
-export const Textarea = styled.textarea`
-  display: flex;
-  width: 85%;
-  height: 130px;
-  margin-left: 60px;
-  margin-top: 20px;
-  padding: 20px;
-  resize: none;
-  font-size: 1.2rem;
-  ::placeholder{
-    font-size:1.1rem;
-  }
-`
-export const Close = styled.button`
-  width: 30px;
-  height: 30px;
-  background: none;
-`
-
-export const Input = styled.input`
-  /* &:checked + label{
-    color: #ffffff;
-    background: #c259ff;
-    font-weight:bold;
-  } */
-`
-
-export const Label = styled.label`
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  min-width: 90px;
-  height: 40px;
-  border: none;
-  border-radius: 10px;
-  /* background: #ffffff; */
-  background: ${prop => prop.tech ? "#c259ff":"#ffffff"};
-  color: ${prop => prop.tech ? "#ffffff":"#000000"};
-  font-weight: ${prop => prop.tech ? "bold":""};
-  box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.3);
-  margin: 25px;
-  margin-right: 0px;
-  margin-left: 920px;
-  margin-top:10px;
-  cursor: pointer;
 `
