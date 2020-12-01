@@ -3,7 +3,7 @@ import Question from "./question/Question";
 import axios from "axios";
 import 'babel-polyfill';
 import * as S from "./style";
-import {junUrl} from "../../../constant/index"
+import { baseUrl } from '../../../constant';
 
 const AddInterview = () => {
   const [question,setQuestion] = useState(1);
@@ -16,7 +16,7 @@ const AddInterview = () => {
       contents:hello,
       field:"test"
     }
-    axios.post(junUrl+"interview",tlqkf);
+    axios.post(baseUrl+"interview",tlqkf);
   }
 
   return (
