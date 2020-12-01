@@ -1,18 +1,13 @@
-import React,{useState} from "react";
+import React from "react";
 import * as S from "./ItemStyle";
-import axios from 'axios';
-import "babel-polyfill"
 
-const FieldItem = ({fixField,fieldItem}) => {
-  const [field,setField] =useState(fieldItem)
-  const onClickField = () => {
-    fixField(field)
-  }
+const FieldItem = ({field}) => {
+
   return (
-    <div onClick={onClickField}>
-      <S.Input name="field" type="radio" id={fieldItem} hidden/>
-      <S.Label htmlFor={fieldItem}>{field}</S.Label>
-    </div>
+    <>
+      <S.Input name="field" type="radio" id={field} hidden/>
+      <S.Label htmlFor={field}>{field}</S.Label>
+    </>
   );
 };
 

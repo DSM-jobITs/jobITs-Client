@@ -8,28 +8,15 @@ export const CompanysWarpper = styled.div`
   justify-content: space-between;
 `;
 
-export const Companys = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5rem;
-  width: 70%;
-  grid-auto-rows: 12rem;
-
-@media screen and (max-width: 1090px) {
-    grid-template-columns: repeat(2, minmax(5rem, 1fr));
-    width: 70%;
-}
-`;
-
 export const Container = styled.div`
-  width : ${props => props.passer ? '100%' : '23%'};
+  width : 23%;
   height : 30%;
-  border-top : ${props => props.passer ? '1px solid #BDBDBD' : 'none'};
 `;
 
 export const ImgContainer = styled.img`
   width: ${props => props.detail ? '20rem' : '100%'};
-  height: ${props => props.detail ? '15rem' : '11rem'};
+  height: ${props => props.detail ? '15rem' : '80%'};
+  background-color: red;
 `;
 
 export const CompanysTitle = styled.p`
@@ -60,6 +47,7 @@ export const Header = styled.div`
 export const DetailContainer = styled.section`
   width : 56.94rem;
   height : 100%;
+  border-top : ${props => props.passer ? '1px solid #BDBDBD' : 'none'};
   margin : ${props => props.detail ? '10rem auto 0 auto' : ''};
   padding : ${props => {
     if (props.passer) return '2rem 0 0 1.2rem';
@@ -83,9 +71,11 @@ export const CompanyColorText = styled.span`
 `;
 
 export const Passer = styled.h3`
+
 `;
 
 export const PasserText = styled.p`
+  margin-top : ${props => props.first ? '2rem' : ''};
 `;
 
 export const div = styled.div``;
@@ -99,15 +89,4 @@ export const Button = styled.button`
   width : 8rem;
   height : 2.5rem;
   margin : 0rem 1rem 2rem 0;
-
-  &:hover {
-    background-color : #CCCCCC;
-    transition : 0.3s
-}
-`;
-
-export const AddText = styled.p`
-  margin-left : 0.3rem;
-  font-size : 0.8rem;
-  color : #707070;
 `;
