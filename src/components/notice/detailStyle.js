@@ -19,6 +19,7 @@ export const Date = styled.p`
   color:#707070;
 `
 
+
 export const Viewer = styled.div`
   width:60%;
   min-height: 20rem;

@@ -1,6 +1,32 @@
 import React from "react";
 import * as S from "./style";
-import {Link} from "react-router-dom"
+import * as N from "../style";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { baseUrl } from "../../../constant";
+
+const NoticeBox = ({title, createdAt, id, isAdmin}) => {
+
+  const config = {
+		headers: {
+			Authorization:
+				"Bearer " + localStorage.getItem("token"),
+		},
+	};
+
+  const onDeleteNotice = () => {
+    axios.delete(baseUrl + "notice/" + id, config)
+    .then(() => {
+      alert("해당 공지가 삭제되었습니다.");
+      setTimeout(() => {
+        window.location.reload();
+      }, 300);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+
 
 const NoticeBox = () => {
   return (
@@ -13,9 +39,11 @@ const NoticeBox = () => {
       >
       </Link> */}
       <S.ListContent>
-      질질문질문질문질문질문질문질문질문질문질문질문질문질문질문문질질문질문질문질문질문질문문질문문질문
+        <N.Number>No.{id}</N.Number>{title}
       </S.ListContent>
-      <S.ListDate>2020-10-24</S.ListDate>
+      </Link>
+      <S.ListDate>{createdAt}</S.ListDate>
+      <S.DeleteButton onClick={onDeleteNotice} style={{display : isAdmin? "" : "none"}}>삭제</S.DeleteButton>
     </S.List>
   );
 };
