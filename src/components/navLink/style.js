@@ -20,7 +20,7 @@ export const Logo = styled.img`
 
 export const LinkWarp = styled.div`
   display: flex;
-  width: 31.25rem;
+  width: 35.25rem;
   height: 1.875rem;
   margin-left:6rem;
   justify-content: space-between;

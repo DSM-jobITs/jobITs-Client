@@ -112,6 +112,14 @@ export const Button = styled.button`
   background:none;
 `
 
+
+export const Number = styled.p`
+  font-size:1rem;
+  color: #000;
+  margin: 0;
+  margin-right: 16px;
+`
+
 export const P = styled.p`
   font-size:1rem;
   font-weight:bold;

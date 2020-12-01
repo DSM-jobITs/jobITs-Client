@@ -5,6 +5,7 @@ import * as S from "./style";
 import {baseUrl,list} from "../../../constant/index"
 import {useHistory} from "react-router-dom"
 
+
 const AddInterview = () => {
   const [tech,setTech] = useState(false);
   const config = {
@@ -25,6 +26,7 @@ const AddInterview = () => {
       contents: contents,
       field: field
     }
+
     axios.post(baseUrl+"interview",data,config)
     .then(res=>{
       alert("면접질문을 등록하였습니다.")

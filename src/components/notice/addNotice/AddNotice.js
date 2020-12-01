@@ -6,7 +6,13 @@ import axios from "axios";
 import { baseUrl } from "../../../constant";
 import { useHistory } from "react-router-dom";
 
+
 const AddNotice = () => {
+
+
+const AddNotice = ({list}) => {
+  console.log(list)
+
 	const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [onCheck, setOnCheck] = useState(false);
@@ -14,9 +20,11 @@ const AddNotice = () => {
 	const config = {
 		headers: {
 			Authorization:
-				"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk",
+
+				"Bearer " + localStorage.getItem("token"),
 		},
 	};
+
 
 	const handleTitleChange = (e) => {
 		setTitle(e.target.value);
@@ -45,17 +53,29 @@ const AddNotice = () => {
     
     axios.post(baseUrl + "notice", form, config)
     .then(() => {
+
       setTimeout(() => {
         history.push({
           pathname: "/notice",
         });
       }, 400);
       
+
+      alert("공지 작성이 완료되었습니다.");
+        history.push({
+          pathname: "/notice",
+        });
+
     })
     .catch(err => {
       console.log(err);
     })
 	};
+
+
+    console.log(document.getElementById("editor").value)
+  }
+
 
 	return (
 		<S.MainForm action="">

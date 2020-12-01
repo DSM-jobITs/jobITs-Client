@@ -8,6 +8,7 @@ import AddEmployment from './addEmployment/AddEmployment';
 const EmpItem = ({question, answer, id, del}) => {
   const [isClick,setIsClick] = useState(false);
   const [isPostCheck,setIsPostCheck] = useState(false);
+
   const handleClick = ( ) => {
     (isClick) ? setIsClick(false) : setIsClick(true)
   }
@@ -31,8 +32,6 @@ const EmpItem = ({question, answer, id, del}) => {
 
   return (
     <>
-      <S.Box>
-        <S.Question onClick={handleClick}>{question}</S.Question>
         <S.Img src="/src/img/Dropdown.png" isClick={isClick}/>
         <S.Label isDel={del} onClick={onPostDelete}>삭제</S.Label>
         {/* <S.CheckBox onClick={onCheckPost} click={isPostCheck} name="del" type="checkbox" id={id}/> */}
@@ -40,7 +39,6 @@ const EmpItem = ({question, answer, id, del}) => {
       </S.Box>
       <S.ExtendBox isClick={isClick}>
         <div>
-          <S.Answer>{answer}</S.Answer>
         </div>
         <S.Modify>수정</S.Modify>
       </S.ExtendBox>
