@@ -5,6 +5,24 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { baseUrl } from "../../../constant";
 
+
+const NoticeBox = ({title, createdAt, id}) => {
+
+  const config = {
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk",
+    },
+  };
+
+  const onDeleteNotice = () => {
+    axios.delete(baseUrl + "notice/" + id, config)
+    .then((res) => {
+      console.log(res);
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
+
 const NoticeBox = ({title, createdAt, id, isAdmin}) => {
 
   const config = {
@@ -28,17 +46,22 @@ const NoticeBox = ({title, createdAt, id, isAdmin}) => {
   }
 
 
-const NoticeBox = () => {
   return (
     <S.List>
-      {/* <Link
-        style={{ textDecoration: "none" }}
+      <Link
+        style={{ textDecoration: "none", width : "70%" }}
         to={{
           pathname: `/notice/${id}`,
+          state : {id}
         }}
       >
-      </Link> */}
       <S.ListContent>
+
+      {title}
+      </S.ListContent>
+      </Link>
+      <S.ListDate>{createdAt}</S.ListDate>
+      <S.DeleteButton onClick={onDeleteNotice}>삭제</S.DeleteButton>
         <N.Number>No.{id}</N.Number>{title}
       </S.ListContent>
       </Link>
