@@ -32,6 +32,7 @@ const Header = () => {
           <S.Category to="/company" activeStyle={activeStyle}>기업</S.Category>
           <S.Category to="/interview" activeStyle={activeStyle}>면접</S.Category>
           <S.Category to="/employment" activeStyle={activeStyle}>취업사전</S.Category>
+          <S.Category to="/recruitment" activeStyle={activeStyle}>채용정보</S.Category>
         </S.LinkWarp> 
         <S.displayDiv isLogin={isLogin}>
           <Link to="/password">
