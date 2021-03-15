@@ -9,8 +9,6 @@ const AddEmployment = () => {
   const [question,setQuestion] = useState("");
   const [answer,setAnswer] = useState("");
   const config = {
-   
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
