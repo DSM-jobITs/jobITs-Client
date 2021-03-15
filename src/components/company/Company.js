@@ -4,13 +4,14 @@ import * as C from "./style";
 import CompanyItem from "./CompanyItem";
 import { baseUrl } from "../../constant/index";
 import axios from "axios";
+import { baseUrl } from "../../constant";
 
 const Company = () => {
   const [list, setList] = useState([]);
   const config = {
     headers: {
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFkbWluIiwiaWF0IjoxNjA0NDgzMTYwLCJleHAiOjE2MTMxMjMxNjB9.DESIU01OzkbR5jxt7yOiavfNQ_6O-8x9da8PweStCSk",
+        
     },
   };
 

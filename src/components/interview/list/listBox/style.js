@@ -24,3 +24,18 @@ export const ListDate = styled.p`
   margin-left: 30px;
   color: #707070;
 `;
+
+export const Label = styled.button`
+  display: ${prop => prop.isDel ? "flex":"none"};
+  align-items:center;
+  justify-content:center;
+  min-width: 3rem;
+  height: 2rem;
+  border: none;
+  background: #ffffff;
+  border-radius:0.43rem;
+  margin-right: -1rem;
+  margin-left: 1rem; 
+  box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+`

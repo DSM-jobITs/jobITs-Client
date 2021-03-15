@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import * as S from "./style";
 import axios from "axios";
 import "babel-polyfill"
-import { minUrl } from '../../../../constant/index'
+import {baseUrl} from "../../../../constant/index"
 
 const LoginBox = ({setIsLogin}) => {
   const [userId,setId] = useState("");
@@ -17,7 +17,7 @@ const LoginBox = ({setIsLogin}) => {
       id: userId,
       password: userPassword
     }
-    axios.post(minUrl+"login",data)
+    axios.post(baseUrl+"login",data)
     .then((res) => {
       console.log("hello");
       localStorage.token = res.data.accessToken;

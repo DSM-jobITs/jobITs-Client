@@ -10,6 +10,7 @@ export const NavWarp = styled.div`
   box-shadow: 0px 3px 6px -1px #a1a1a1;
   background: #fff;
   align-items: center;
+  z-index:1;
 `;
 
 export const Logo = styled.img`
@@ -19,7 +20,7 @@ export const Logo = styled.img`
 
 export const LinkWarp = styled.div`
   display: flex;
-  width: 31.25rem;
+  width: 35.25rem;
   height: 1.875rem;
   margin-left:6rem;
   justify-content: space-between;
