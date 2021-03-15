@@ -13,7 +13,7 @@ const EmpItem = ({question, answer, id, del}) => {
     (isClick) ? setIsClick(false) : setIsClick(true)
   }
   const config = {
-    headers : { "Authorization" : "
+
   };
   // const onCheckPost = () => {
   //   setIsPostCheck(!isPostCheck);
