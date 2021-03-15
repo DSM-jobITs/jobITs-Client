@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const TitleBox = styled.div`
-  width:65%;
+  width:60%;
   height: 7rem;
   background:#ededed;
 `
@@ -19,6 +19,7 @@ export const Date = styled.p`
   color:#707070;
 `
 
+
 export const Viewer = styled.div`
   width:60%;
   min-height: 20rem;
@@ -28,7 +29,7 @@ export const Viewer = styled.div`
 export const FileBox = styled.div`
   display:flex;
   align-items:center;
-  width:65%; 
+  width:60%; 
   height:4.2rem;
   border-top:solid 2px #707070;
   border-bottom:solid 2px #707070; 
@@ -48,4 +49,15 @@ export const P = styled.p`
 export const File = styled.p`
   margin-left:1.4rem;
   cursor: pointer;
+`
+
+export const Button = styled.button`
+  width: 7.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius:0.938rem;
+  background: #4B4B4B;
+  color: #fff;
+  font-weight:bold; 
+  cursor:pointer;
 `
